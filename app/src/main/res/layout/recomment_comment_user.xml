@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_top_part"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_recommend_user">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="7位共同好友"
+            android:textColor="#cc9933"
+            android:textSize="18dp"
+            android:layout_margin="10dp"
+            android:id="@+id/tv_title"
+            android:background="@android:color/transparent"
+            />
+
+        <View
+            android:id="@+id/divied_title"
+            android:layout_width="wrap_content"
+            android:layout_height="2dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/tv_title"
+            android:background="#11111111"
+            />
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="300dp"
+            android:id="@+id/rl_commend_select"
+            android:layout_below="@+id/divied_title"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="@android:color/transparent"/>
+    </RelativeLayout>
+
+
+    <ImageButton
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="退出"
+        android:textSize="18dp"
+        android:textColor="#83993f"
+       android:src="@mipmap/commend_close"
+     android:background="@android:color/transparent"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/tv_select_exit"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        />
+
+
+
+</LinearLayout>

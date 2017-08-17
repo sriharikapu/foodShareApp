@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/normal_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_cover"
+            android:layout_width="match_parent"
+            android:layout_height="248dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@color/image_bg"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:id="@+id/iv_head_bg"
+            android:layout_width="match_parent"
+            android:layout_height="248dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@mipmap/detail_china_style_head_bg"
+            android:scaleType="fitXY" />
+
+        <ImageView
+            android:id="@+id/iv_add_crown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/iv_avator"
+            android:layout_alignTop="@+id/iv_avator"
+            android:layout_marginLeft="-3dp"
+            android:layout_marginTop="-3dp"
+            android:src="@mipmap/small_bg_is_add_crow"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/iv_avator"
+            android:layout_width="58dp"
+            android:layout_height="58dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="90dp"
+            android:background="@drawable/user_avatar_circle_with_alpha"
+            android:padding="1.5dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/user_avatar_circle_gray" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_avator"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:shadowColor="@color/white_shadow_color"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="1"
+            android:text="名字"
+            android:textColor="@color/white_bg"
+            android:textSize="@dimen/font_size_3" />
+
+        <TextView
+            android:id="@+id/tv_attention"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/iv_avator"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="-15dp"
+            android:drawableLeft="@mipmap/ic_add_attention"
+            android:drawablePadding="4dp"
+            android:gravity="center"
+            android:textColor="@color/white_bg"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            tools:text="互相关注" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:textColor="@color/china_style_font_color"
+        android:textSize="@dimen/font_size_6_1"
+        tools:text="有味道的地道美食之旅" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/padding_middle"
+        android:gravity="center"
+        android:textColor="#aaaaaa"
+        android:textSize="@dimen/font_size_3"
+        tools:text="时间: 2016-8-9 15:20" />
+
+    <LinearLayout
+        android:id="@+id/ll_level_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RatingBar
+            android:id="@+id/rb_level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/iv_avatar"
+            android:layout_toLeftOf="@+id/tv_level"
+            android:isIndicator="true"
+            android:minHeight="12dp"
+            android:numStars="4"
+            android:progressDrawable="@drawable/selector_rating_detail_china"
+            android:rating="2" />
+
+        <View
+            android:id="@+id/v_line_level"
+            android:layout_width="0.5dp"
+            android:layout_height="16dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="9dp"
+            android:layout_toLeftOf="@+id/tv_level"
+            android:background="@color/china_style_font_color" />
+
+        <TextView
+            android:id="@+id/tv_level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1px"
+            android:singleLine="true"
+            android:textColor="@color/china_style_font_color"
+            android:textSize="@dimen/font_size_2"
+            tools:text="极力推荐" />
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/eat_info_parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_is_jing"
+            android:layout_marginLeft="@dimen/padding_middle"
+            android:layout_marginRight="@dimen/padding_middle"
+            android:background="@drawable/eat_detail_food_bg">
+
+            <ImageView
+                android:id="@+id/detail_eat_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/padding_small"
+                android:src="@mipmap/detail_eat_icon" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding_small"
+                android:layout_marginRight="@dimen/padding_small"
+                android:layout_marginTop="11dp"
+                android:layout_toRightOf="@+id/detail_eat_icon"
+                android:paddingBottom="7dp">
+
+                <com.fengnian.smallyellowo.foodie.View.FlowLayout
+                    android:id="@+id/eat_info_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start|top" />
+
+                <LinearLayout
+                    android:id="@+id/ll_menu_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/eat_info_layout"
+                    android:layout_marginBottom="@dimen/china_style_line_space"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/detail_eat_info_bg"
+                        android:text="菜品"
+                        android:textColor="@color/china_style_font_color"
+                        android:textSize="@dimen/font_size_2" />
+
+                    <TextView
+                        android:id="@+id/tv_foods"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/china_style_font_color"
+                        android:textSize="@dimen/font_size_2"
+                        tools:text="：平江外婆菜、湘西好吃的鱼、平江外婆菜、湘西好吃的鱼" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_rest_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ll_menu_container"
+                    android:layout_marginBottom="@dimen/china_style_line_space"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/detail_eat_info_bg"
+                        android:text="商户"
+                        android:textColor="@color/china_style_font_color"
+                        android:textSize="@dimen/font_size_2" />
+
+                    <TextView
+                        android:id="@+id/tv_rest_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/padding_small"
+                        android:drawableRight="@drawable/china_style_right_arrow"
+                        android:lineSpacingMultiplier="1.2"
+                        android:textColor="@color/china_style_font_color"
+                        android:textSize="@dimen/font_size_2"
+                        tools:text="：北京好吃的烤鸭食品专营" />
+                </LinearLayout>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_is_jing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="-10dp"
+            android:src="@mipmap/dynamic_detail_jing" />
+
+    </RelativeLayout>
+</LinearLayout>

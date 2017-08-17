@@ -1,0 +1,22 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.fan.framework.widgets.ResizeLayout
+        android:id="@+id/ll_baseActivity_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></com.fan.framework.widgets.ResizeLayout>
+
+    <include
+        android:id="@+id/ll_actionBar"
+        android:layout_width="match_parent"
+        android:fitsSystemWindows="true"
+        android:layout_height="@dimen/ff_actionbarHight"
+        layout="@layout/ff_view_actionbar" />
+
+    <FrameLayout
+        android:id="@+id/fl_baseActivity_bottombar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"></FrameLayout>
+</FrameLayout>

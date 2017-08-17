@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:background="@color/white_bg">
+
+
+    <EditText
+       android:id="@+id/ed_food_name"
+       android:layout_toRightOf="@+id/iv_1"
+       android:layout_width="match_parent"
+       android:background="@null"
+       android:layout_toLeftOf="@+id/iv_delete_img"
+       android:layout_marginLeft="8dp"
+        android:gravity="center_vertical"
+        android:textCursorDrawable="@drawable/edtext_cursor_style"
+        android:textSize="20dp"
+        android:singleLine="true"
+        android:text=""
+        android:maxLength="18"
+        android:inputType="text"
+        android:imeOptions="actionGo"
+        android:layout_centerVertical="true"
+       android:layout_height="match_parent" />
+
+    <ImageView
+        android:id="@+id/iv_delete_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/memo_delete_img"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:padding="10dp"
+        />
+
+    <ImageView
+        android:id="@+id/iv_1"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:background="@mipmap/memo_edit_img"
+        android:layout_marginStart="16dp" />
+</RelativeLayout>

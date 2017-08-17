@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="0dp"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="-3dip"
+    android:layout_marginRight="-3dip"
+    android:layout_weight="1">
+
+    <TextView
+        android:id="@+id/tab_title1"
+        style="@style/MyWidget.TabText"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:textColor="#f00"
+        android:gravity="bottom"
+        android:layout_centerHorizontal="true"
+        android:paddingBottom="13dp" />
+
+    <TextView
+        android:id="@+id/tab_title_sum"
+        style="@style/tip_textView"
+        android:background="@drawable/main_bottom_tip_big"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:layout_toRightOf="@id/tab_title1"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:textSize="12sp"
+        android:visibility="gone"></TextView>
+
+    <ImageView
+        android:id="@+id/tab_title_tips"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:layout_toRightOf="@id/tab_title1"
+        android:layout_marginLeft="1dp"
+        android:src="@drawable/main_bottom_tip_small"
+        android:layout_marginTop="10dp"
+        android:scaleType="fitXY"
+        android:gravity="center"
+        android:visibility="gone"/>
+</RelativeLayout>

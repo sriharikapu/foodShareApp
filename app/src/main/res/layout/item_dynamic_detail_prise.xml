@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv_add_crown"
+        android:layout_width="13dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/iv_avator"
+        android:layout_alignTop="@+id/iv_avator"
+        android:layout_marginLeft="-5dp"
+        android:layout_marginTop="-5.5dp"
+        android:src="@mipmap/small_bg_is_add_crow" />
+
+    <ImageView
+        android:id="@+id/iv_avator"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5.5dp"
+        android:background="@drawable/user_avatar_circle_gray" />
+
+    <TextView
+        android:id="@+id/tv_num"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5.5dp"
+        android:background="@drawable/dynamic_detail_prise_orer_flow_circle_gray"
+        android:gravity="center"
+        android:text="22"
+        android:textColor="#fff"
+        android:textSize="14sp" />
+
+
+</RelativeLayout>

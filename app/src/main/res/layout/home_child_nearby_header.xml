@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/header_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white_bg"
+    android:clipChildren="false"
+    android:orientation="vertical">
+
+    <com.fengnian.smallyellowo.foodie.homepage.NearbyFragHeaderViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="166dp"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="@dimen/home_nearby_header_padding"
+        android:layout_marginTop="@dimen/home_nearby_header_padding"
+        android:clipChildren="false" />
+</RelativeLayout>

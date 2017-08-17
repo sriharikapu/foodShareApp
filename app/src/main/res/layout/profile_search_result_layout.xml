@@ -1,0 +1,79 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frag_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_bg"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/profile_search_title"
+        layout="@layout/profile_search_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/user_tab_height"
+        android:layout_alignParentTop="true" />
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profile_search_title"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/user_tab_height"
+            android:orientation="horizontal">
+
+            <include
+                android:id="@+id/tab_left"
+                layout="@layout/user_tab_item"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <include
+                android:id="@+id/tab_right"
+                layout="@layout/user_tab_item"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/gray_bg_new" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="7dp"
+            android:background="@color/color_8" />
+
+        <include
+            android:id="@+id/filter_view"
+            layout="@layout/food_filter_search_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/user_tab_filter_item_height" />
+
+        <View
+            android:id="@+id/filter_view_line"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/gray_bg_new" />
+    </LinearLayout>
+
+    <com.fengnian.smallyellowo.foodie.View.NoScrollViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/linear" />
+
+    <ImageView
+        android:id="@+id/empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/profile_search_title"
+        android:scaleType="centerInside"
+        android:visibility="gone" />
+</RelativeLayout>

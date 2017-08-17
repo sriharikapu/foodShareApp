@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="#FCF2E6"
+    android:paddingBottom="35dp"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_img"
+        android:layout_width="match_parent"
+        android:layout_height="430dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tv_content"
+        android:layout_marginTop="15dp"
+        android:background="@color/image_bg"
+        android:scaleType="centerCrop" />
+
+    <ImageView
+        android:id="@+id/iv_img_cover"
+        android:layout_width="match_parent"
+        android:layout_height="430dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tv_content"
+        android:src="@mipmap/pomo_left"
+        android:layout_marginTop="15dp"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tv_dish_name"
+        android:layout_marginBottom="8dp"
+        android:gravity="top|left"
+        android:lineSpacingExtra="4dp"
+        android:paddingBottom="1dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="13dp"
+        android:text="New Text"
+        android:textColor="@color/china_style_font_color"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_dish_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:drawablePadding="6dp"
+        android:drawableLeft="@drawable/dish_left"
+        android:drawableRight="@drawable/dish_right"
+        android:gravity="center"
+        android:text="New Text"
+        android:textColor="@color/china_style_font_color"
+        android:textSize="14sp" />
+
+    <ImageView
+        android:id="@+id/iv_comment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/iv_img"
+        android:layout_alignStart="@+id/iv_img"
+        android:layout_alignTop="@+id/iv_img"
+        android:layout_marginLeft="15dp"
+        android:src="@drawable/ei_ic_good" />
+</RelativeLayout>

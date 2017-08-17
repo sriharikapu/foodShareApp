@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/normal_bg">
+
+    <ImageView
+        android:id="@+id/iv_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:layout_centerHorizontal="true"
+        android:background="@mipmap/iv_bangding_tel"
+        />
+
+    <TextView
+        android:id="@+id/tv_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="34dp"
+        android:layout_below="@+id/iv_2"
+        android:textColor="#666"
+        android:textSize="15dp"
+        android:layout_marginLeft="60dp"
+        android:text="绑定手机号后，可以："
+        />
+
+    <TextView
+    android:id="@+id/tv_2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/tv_1"
+    android:drawableLeft="@drawable/bangding_tel_circle"
+    android:drawablePadding="8dp"
+    android:layout_marginLeft="67dp"
+    android:layout_marginTop="13dp"
+    android:text="查找手机通讯录中的小黄圈的好友。"
+    android:textColor="#666"
+    android:textSize="13dp"
+    />
+
+    <TextView
+        android:id="@+id/tv_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_2"
+        android:drawableLeft="@drawable/bangding_tel_circle"
+        android:drawablePadding="8dp"
+        android:layout_marginLeft="67dp"
+        android:layout_marginTop="13dp"
+        android:text="用手机号码+小黄圈密码登录。"
+        android:textColor="#666"
+        android:textSize="13dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_3"
+        android:drawableLeft="@drawable/bangding_tel_circle"
+        android:drawablePadding="8dp"
+        android:layout_marginLeft="67dp"
+        android:layout_marginTop="13dp"
+        android:text="享受更安全的账号保护服务。"
+        android:textColor="#666"
+        android:textSize="13dp"
+        />
+
+
+    <TextView
+        android:id="@+id/tv_bangding"
+        android:layout_width="283dp"
+        android:layout_height="44dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/tv_4"
+        android:layout_marginTop="47dp"
+        android:background="@drawable/login_selector"
+        android:textColor="#333"
+        android:textSize="16dp"
+        android:gravity="center"
+        android:text="马上绑定"
+        />
+</RelativeLayout>

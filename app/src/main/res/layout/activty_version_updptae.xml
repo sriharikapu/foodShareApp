@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/normal_bg">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/rl_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/iv_logo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="68dp"
+                        android:src="@mipmap/logo" />
+
+                    <TextView
+                        android:id="@+id/tv_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/iv_logo"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="9dp"
+                        android:text="小黄圈"
+                        android:textColor="#333333"
+                        android:textSize="18dp" />
+
+                    <ImageView
+                        android:id="@+id/iv_have_new_version"
+                        android:layout_below="@+id/iv_logo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/tv_1"
+                        android:visibility="gone"
+                        android:src="@mipmap/version_new_have"/>
+
+                    <TextView
+                        android:id="@+id/tv_version"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_1"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="12dp"
+                        android:text="version1.4.0"
+                        android:textColor="#333333"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:id="@+id/tv_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_version"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="40dp"
+                        android:gravity="center"
+                        android:text="目前已是最新版本"
+                        android:textColor="#888888"
+                        android:textSize="16dp" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_4"
+                        android:layout_width="300dp"
+                        android:layout_height="184dp"
+                        android:layout_below="@+id/tv_version"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="28dp"
+                        android:visibility="gone"
+                        android:background="@drawable/update_version_content_bg"
+                        >
+                    <ListView
+                        android:paddingTop="3dp"
+                        android:id="@+id/lv_up_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="184dp"
+
+                        android:layout_centerHorizontal="true"
+                        android:divider="#00000000"
+                        android:dividerHeight="0dip"
+                         />
+                    </RelativeLayout>
+                    <TextView
+                        android:id="@+id/tv_genxin"
+                        android:layout_width="330dp"
+                        android:layout_height="42dp"
+                        android:layout_below="@id/rl_4"
+                        android:layout_marginTop="30dp"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/gengxin_selector"
+                        android:gravity="center"
+                        android:text="更新到最新版本"
+                        android:textSize="14dp"
+                        android:visibility="gone"
+                        android:textColor="#333333"
+                      />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_below="@+id/tv_genxin" />
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/iv_network_exception"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/network_exception"
+        android:visibility="gone" />
+</RelativeLayout>

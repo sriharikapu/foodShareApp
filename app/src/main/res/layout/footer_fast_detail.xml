@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="36dp">
+
+
+        <TextView
+            android:id="@+id/tv_rest_name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toLeftOf="@+id/tv_time"
+            android:drawableLeft="@mipmap/dynamic_item_rest"
+            android:drawablePadding="4dp"
+            android:gravity="center_vertical"
+            android:text="江西白鹿餐厅（宋朝分店）"
+            android:textColor="@color/ff_text_gray"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:gravity="center_vertical"
+            android:text="刚刚"
+            android:textColor="@color/ff_text_gray"
+            android:textSize="11sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
+
+        <TextView
+            android:id="@+id/tv_time2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:gravity="center_vertical"
+            android:text="刚刚"
+            android:textColor="@color/ff_text_gray"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/tv_prise"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/tv_comment"
+            android:drawableLeft="@mipmap/dynamic_prise_no"
+            android:drawablePadding="4dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="11dp"
+            android:paddingRight="12dp"
+            android:text="赞"
+            android:textColor="@color/ff_text_black"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_eaten"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/tv_prise"
+            android:layout_toStartOf="@+id/tv_prise"
+            android:drawableLeft="@mipmap/dynamic_eaten_normal"
+            android:drawablePadding="4dp"
+            android:gravity="center"
+            android:paddingLeft="11dp"
+            android:paddingRight="12dp"
+            android:text="吃过"
+            android:textColor="@color/ff_text_gray"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:drawableLeft="@mipmap/dynamic_comment"
+            android:drawablePadding="4dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="11dp"
+            android:paddingRight="15dp"
+            android:text="评论"
+            android:textColor="@color/ff_text_black"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_dynamic_comment_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/iv_avatar"
+        android:layout_alignRight="@+id/tv_level"
+        android:layout_below="@+id/tv_time"
+        android:orientation="vertical"
+        android:paddingBottom="6dp">
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/ff_line" />
+
+        <LinearLayout
+            android:id="@+id/tv_dynamic_commentContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="4dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="4dp" />
+    </LinearLayout>
+</LinearLayout>

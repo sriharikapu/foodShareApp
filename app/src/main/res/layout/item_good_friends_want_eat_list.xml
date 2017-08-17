@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_bg"
+   >
+  <ImageView
+      android:id="@+id/iv_add_crown"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="20dp"
+      android:layout_marginTop="13dp"
+      android:visibility="gone"
+      android:background="@mipmap/small_bg_is_add_crow"/>
+  <ImageView
+      android:id="@+id/iv_head"
+      android:layout_width="50dp"
+      android:layout_height="50dp"
+      android:scaleType="centerCrop"
+      android:layout_marginTop="23dp"
+      android:layout_marginLeft="15dp"
+      />
+    <TextView
+        android:id="@+id/tv_nickname"
+        android:layout_marginTop="28dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12dp"
+        android:textColor="#333"
+        android:layout_toRightOf="@+id/iv_head"
+        android:layout_marginLeft="8dp"
+        android:text="刘德华"/>
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="wrap_content"
+        android:singleLine="true"
+        android:maxLength="20"
+        android:text="lalla"
+        android:layout_toRightOf="@+id/iv_head"
+        android:layout_marginLeft="8dp"
+        android:textSize="11dp"
+        android:textColor="#999"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/tv_nickname"
+        android:layout_height="wrap_content" />
+
+  <View
+      android:layout_width="match_parent"
+      android:layout_height="0.1dp"
+      android:background="#ccc"
+      android:layout_marginTop="10dp"
+      android:layout_marginLeft="70dp"
+      android:layout_below="@+id/iv_head"
+     ></View>
+
+</RelativeLayout>

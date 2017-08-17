@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/normal_bg">
+
+    <RelativeLayout
+        android:id="@+id/rl_1"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/rl_clear_cache"
+            android:background="@drawable/item_contact_friend_selector"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="清空缓存"
+                android:textSize="14dp"
+                android:textColor="#333333"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:layout_centerVertical="true"
+                android:background="@mipmap/arrow_left"/>
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="0.1dp"
+                android:layout_marginLeft="10dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/normal_bg"></View>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rl_check_score"
+            android:layout_below="@id/rl_clear_cache"
+            android:background="@drawable/item_contact_friend_selector"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="积分检查"
+                android:textSize="14dp"
+                android:textColor="#333333"/>
+            <ToggleButton
+                android:id="@+id/tl_toggle"
+                android:layout_width="50dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/me_remind_selector"
+                android:drawableRight="@drawable/me_remind_point"
+                android:textOff=""
+                android:textOn=""
+                />
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="0.1dp"
+                android:layout_marginLeft="10dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/normal_bg"></View>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

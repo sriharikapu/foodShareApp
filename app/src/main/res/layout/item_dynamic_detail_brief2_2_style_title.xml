@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/brief2_style_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_middle">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/brief2_2_style_cover_height"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="22dp"
+            android:layout_marginRight="@dimen/padding_middle"
+            android:layout_marginTop="@dimen/padding_tiny"
+            android:layout_toLeftOf="@+id/right_linear"
+            android:background="@drawable/brief2_style_edging" />
+
+        <com.fengnian.smallyellowo.foodie.widgets.CircleImageView
+            android:id="@+id/iv_cover"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/brief2_2_style_cover_height"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/padding_small"
+            android:layout_marginRight="@dimen/padding_big"
+            android:layout_toLeftOf="@+id/right_linear"
+            android:background="@color/image_bg"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:id="@+id/iv_is_jing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_cover"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="-10dp"
+            android:src="@mipmap/dynamic_detail_jing" />
+
+        <com.fengnian.smallyellowo.foodie.widgets.VerticalTextView
+            android:id="@+id/tv_title_2"
+            android:layout_width="10dp"
+            android:layout_height="@dimen/brief2_2_style_cover_height"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/title_text_color"
+            android:textSize="@dimen/font_size_5"
+            tools:text="有味道的地道美食之旅" />
+
+        <View
+            android:id="@+id/title_line"
+            android:layout_width="1dp"
+            android:layout_height="@dimen/brief2_2_style_cover_height"
+            android:layout_marginLeft="@dimen/padding_tiny"
+            android:layout_toLeftOf="@+id/tv_title_2"
+            android:background="@color/brief2_style_line_color" />
+
+        <LinearLayout
+            android:id="@+id/right_linear"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/brief2_2_style_cover_height"
+            android:layout_toLeftOf="@+id/title_line"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <com.fengnian.smallyellowo.foodie.widgets.VerticalTextView
+                    android:id="@+id/tv_poeple_num_2"
+                    android:layout_width="@dimen/vertical_textview_width"
+                    android:layout_height="@dimen/vertical_textview_height"
+                    android:gravity="center"
+                    android:maxLength="10"
+                    android:minWidth="40dp"
+                    android:textColor="@color/title_text_color"
+                    android:textSize="@dimen/font_size_3"
+                    tools:text="人数：10" />
+
+                <com.fengnian.smallyellowo.foodie.widgets.VerticalTextView
+                    android:id="@+id/vertical_rating_bar_title"
+                    android:layout_width="@dimen/vertical_textview_width"
+                    android:layout_height="41dp"
+                    android:textColor="@color/title_text_color"
+                    android:textSize="@dimen/font_size_3"
+                    tools:text="评分" />
+
+                <com.fengnian.smallyellowo.foodie.widgets.CustomRatingBar
+                    android:id="@+id/vertical_rating_bar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="vertical" />
+
+                <com.fengnian.smallyellowo.foodie.widgets.VerticalTextView
+                    android:id="@+id/tv_level_2"
+                    android:layout_width="@dimen/vertical_textview_width"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:textSize="@dimen/font_size_2"
+                    tools:text="极力推荐" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.fengnian.smallyellowo.foodie.widgets.VerticalTextView
+                    android:id="@+id/tv_class_2"
+                    android:layout_width="@dimen/vertical_textview_width"
+                    android:layout_height="@dimen/vertical_textview_height"
+                    android:textColor="@color/title_text_color"
+                    android:textSize="@dimen/font_size_3"
+                    tools:text="餐类：下午茶" />
+
+                <com.fengnian.smallyellowo.foodie.widgets.VerticalTextView
+                    android:id="@+id/tv_total_price_2"
+                    android:layout_width="@dimen/vertical_textview_width"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/title_text_color"
+                    android:textSize="@dimen/font_size_3"
+                    tools:text="总价：¥1000" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <com.fengnian.smallyellowo.foodie.widgets.VerticalTextView
+                    android:id="@+id/tv_rest_name_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:textColor="@color/title_text_color"
+                    android:textSize="@dimen/font_size_3"
+                    tools:text="餐厅:北京好吃的烤鸭食品专营" />
+
+                <ImageView
+                    android:id="@+id/brief_style_2_2_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/tv_rest_name_2"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="-10dp"
+                    android:src="@drawable/brief_style_2_2_arrow" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp">
+
+        <ImageView
+            android:id="@+id/iv_add_crown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/iv_avator"
+            android:layout_alignTop="@+id/iv_avator"
+            android:layout_marginLeft="-3dp"
+            android:layout_marginTop="-3dp"
+            android:src="@mipmap/small_bg_is_add_crow"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/iv_avator"
+            android:layout_width="58dp"
+            android:layout_height="58dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/user_avatar_circle_with_alpha"
+            android:padding="1.5dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/user_avatar_circle_gray" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_avator"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/title_text_color"
+            android:textSize="@dimen/font_size_3"
+            tools:text="名字" />
+
+        <TextView
+            android:id="@+id/tv_attention"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="32dp"
+            android:layout_marginTop="27dp"
+            android:drawableLeft="@mipmap/black_ic_add_attention"
+            android:drawablePadding="4dp"
+            android:gravity="center"
+            android:textColor="@color/title_text_color"
+            android:textSize="@dimen/font_size_3"
+            tools:text="互相关注" />
+    </RelativeLayout>
+
+</LinearLayout>

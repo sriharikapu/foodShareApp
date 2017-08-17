@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.fengnian.smallyellowo.foodie.widgets.SlidingButtonView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_ugc_edit_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:paddingBottom="6dp"
+        android:paddingTop="6dp">
+
+
+        <EditText
+            android:id="@+id/et_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="9dp"
+            android:layout_marginRight="9dp"
+            android:background="@drawable/shape_edit_ugc_item_bg"
+            android:gravity="top|left"
+            android:hint="为你的美食说点什么吧..."
+            android:inputType="textMultiLine"
+            android:paddingBottom="16dp"
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp"
+            android:paddingTop="6dp"
+            android:textColor="@color/ff_text_black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_text_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/et_content"
+            android:layout_alignRight="@+id/et_content"
+            android:drawablePadding="4dp"
+            android:drawableRight="@mipmap/ic_text_number"
+            android:gravity="center_vertical"
+            android:paddingBottom="4dp"
+            android:paddingLeft="4dp"
+            android:paddingRight="9dp"
+            android:paddingTop="15dp"
+            android:text="0/1"
+            android:textColor="@color/ff_text_gray"
+            android:textSize="10sp" />
+
+        <ImageView
+            android:id="@+id/iv_del"
+            android:layout_width="36dp"
+            android:layout_marginRight="9dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/et_content"
+            android:layout_centerVertical="true"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp"
+            android:src="@mipmap/food_item_del" />
+    </RelativeLayout>
+
+</com.fengnian.smallyellowo.foodie.widgets.SlidingButtonView>

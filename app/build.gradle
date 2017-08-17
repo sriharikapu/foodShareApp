@@ -1,0 +1,124 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.0"
+    dexOptions
+            {
+                javaMaxHeapSize "4g"
+            }
+    defaultConfig {
+        applicationId "com.fengnian.smallyellowo.foodie"
+        minSdkVersion 16
+        targetSdkVersion 22
+        versionCode 320
+
+        versionName "3.2.0"
+        multiDexEnabled true
+
+
+        manifestPlaceholders = [
+                GETUI_APP_ID: "EtvOACOJjq9VGI4rx1Ktd1", GETUI_APP_KEY: "aGLWgI5jUg7pCEEogxVHY3", GETUI_APP_SECRET: "13uxdrHzUJ8wokJSyfnIK3",
+                PACKAGE_NAME: "com.fengnian.smallyellowo.foodie"
+        ]
+
+        ndk {
+            abiFilters "armeabi", "x86"
+        }
+    }
+    signingConfigs {
+        debug {
+            storeFile file("../debug.keystore")
+        }
+
+        release {
+            storeFile file("../keystore.jks")
+            storePassword "Rkylin123"
+            keyAlias "foodie"
+            keyPassword "Rkylin123"
+        }
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+    buildTypes {
+        release {
+            buildConfigField "Integer", "BUILD_TYPE_DEFINE", "2001"
+            signingConfig signingConfigs.release
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            buildConfigField "Integer", "BUILD_TYPE_DEFINE", "1001"
+//            signingConfig signingConfigs.debug
+            signingConfig signingConfigs.release
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    productFlavors {
+//        _360 {}
+//        Baidu {}
+        Tencent {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "tencent"]
+        }
+//        XiaoMi {}
+//        Letv {}
+//        HuaWei {}
+//        Mumayi {}
+//        Lenovo {}
+//        Sogou {}
+//        WanDouJia {}
+//        Samsung {}
+    }
+    productFlavors.all {
+        flavor -> flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
+    }
+}
+
+
+dependencies {
+    compile project(':PushSDK')
+    //compile fileTree(dir: 'jniLibs', include: ['*.jar'])
+    compile files('src/main/jniLibs/httpcore-4.4.1.jar')
+    compile files('src/main/jniLibs/AMap2DMap_2.9.1_AMapLocation_2.9.0_20160906.jar')
+    //    compile files('src/main/jniLibs/libammsdk.jar')
+    compile files('src/main/jniLibs/baidumapapi_base_v4_0_0.jar')
+    compile files('src/main/jniLibs/baidumapapi_util_v4_0_0.jar')
+    compile files('src/main/jniLibs/baidumapapi_search_v4_0_0.jar')
+    compile files('src/main/jniLibs/baidumapapi_radar_v4_0_0.jar')
+    compile files('src/main/jniLibs/baidumapapi_map_v4_0_0.jar')
+    compile files('src/main/jniLibs/baidumapapi_cloud_v4_0_0.jar')
+    compile files('src/main/jniLibs/locSDK_6.13.jar')
+    compile files('src/main/jniLibs/ormlite-android-5.0.jar')
+    compile files('src/main/jniLibs/ormlite-core-5.0.jar')
+    compile files('src/main/jniLibs/weibosdkcore_release.jar')
+    compile files('src/main/jniLibs/aliyun-oss-sdk-android-2.3.0.jar')
+    compile files('src/main/jniLibs/okhttp-3.4.1.jar')
+    compile files('src/main/jniLibs/okio-1.10.0.jar')
+    compile project(':TuSDKUIDefault1')
+//    compile project(":share_login")
+    compile files('src/main/jniLibs/zxing.jar')
+    compile files('src/main/jniLibs/tbs_sdk_thirdapp_v3.1.0.1034_43100_sharewithdownload_obfs_20170301_182143.jar')
+    // compile 'com.android.support.constraint:constraint-layout:+'
+    compile files('src/main/jniLibs/baidu_cuid.jar')
+    compile files('src/main/jniLibs/BDSoleAgencySDK_V1.0_20160323.jar')
+    compile files('src/main/jniLibs/AMap_Search_V5.0.0_20170309.jar')
+    compile files('src/main/jniLibs/AMap_3DMap_V4.0.1_20160923.jar')
+    compile files('src/main/jniLibs/open_sdk_r5788_lite.jar')
+
+    compile 'com.getui:sdk:2.10.2.0'
+    compile 'com.alibaba:fastjson:1.2.21'
+    compile 'com.jakewharton:butterknife:7.0.1'
+    compile 'com.android.support:design:25.3.1'
+    compile 'com.umeng.analytics:analytics:latest.integration'
+    compile 'com.android.support:recyclerview-v7:25.3.1'
+    compile 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:1.0.2'
+    compile 'javax.annotation:javax.annotation-api:1.2'
+    compile 'com.android.support.constraint:constraint-layout:1.0.1'
+    compile 'com.android.support:multidex:1.0.1'
+    compile 'com.squareup.leakcanary:leakcanary-android:1.5.1'
+}

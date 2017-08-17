@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="10dp"
+    android:paddingLeft="12dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingRight="12dp"
+    android:paddingTop="10dp">
+
+    <LinearLayout
+        android:id="@+id/item_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_bg"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingBottom="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:layout_marginTop="12dp"
+            android:drawableLeft="@drawable/recommend_line_icon"
+            android:drawablePadding="3dp"
+            android:drawableRight="@drawable/recommend_line_icon"
+            android:text="猜你喜欢"
+            android:textColor="@color/title_text_color"
+            android:textSize="@dimen/font_size_2_1" />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/image_bg"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            tools:text="一个好吃下雨天不打烊的茶餐厅"
+            android:textColor="@color/title_text_color"
+            android:textSize="@dimen/font_size_4_1" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            tools:text="绿茶餐厅（大望路店）"
+            android:textColor="@color/title_text_color"
+            android:textSize="@dimen/font_size_2_1" />
+
+        <TextView
+            android:id="@+id/tv_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            tools:text="自助餐 • 国贸 • 10人想吃"
+            android:textColor="@color/title_text_color"
+            android:textSize="@dimen/font_size_2_1" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/recommend_close_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:padding="10dp"
+        android:src="@drawable/recommend_close_icon" />
+
+    <RelativeLayout
+        android:id="@+id/recommend_dislike"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:id="@+id/recommend_dislike_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/recommend_dislike__icon" />
+
+        <ImageView
+            android:id="@+id/recommend_dislike_del_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/recommend_dislike_icon"
+            android:src="@drawable/recommend_dislike_del_icon" />
+    </RelativeLayout>
+
+</RelativeLayout>

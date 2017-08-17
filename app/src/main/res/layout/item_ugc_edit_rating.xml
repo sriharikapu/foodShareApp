@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="10dp"
+    android:gravity="top">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="43dp"
+        android:layout_marginLeft="9dp"
+        android:minHeight="43dp"
+        android:layout_marginRight="7dp"
+        android:layout_marginTop="7dp"
+        android:layout_toLeftOf="@+id/rl_more"
+        android:layout_toStartOf="@+id/rl_more"
+        android:background="@drawable/shape_edit_ugc_item_bg">
+
+        <TextView
+            android:id="@+id/tv_level"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="8dp"
+            android:drawableLeft="@mipmap/ic_ugc_edit_ragine_disable"
+            android:drawablePadding="8dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="12dp"
+            android:scaleType="centerInside"
+            android:text="美食评分"
+            android:textColor="@color/ff_text_gray"
+            android:textSize="13sp" />
+
+        <RatingBar
+            android:id="@+id/rb_level"
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/ic_help"
+            android:maxHeight="16dp"
+            android:minHeight="16dp"
+            android:numStars="4"
+            android:progressDrawable="@drawable/selector_rating_edit"
+            android:rating="3"
+            android:stepSize="1" />
+
+        <ImageView
+            android:id="@+id/ic_help"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:paddingLeft="12dp"
+            android:paddingRight="15dp"
+            android:scaleType="centerInside"
+            android:src="@mipmap/ic_rating_help" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_more"
+        android:layout_width="75dp"
+        android:layout_height="43dp"
+        android:minHeight="43dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="9dp"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/shape_edit_ugc_item_bg">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:drawableLeft="@mipmap/ugc_edit_more"
+            android:drawablePadding="8dp"
+            android:text="更多"
+            android:textColor="@color/ff_text_black"
+            android:textSize="14sp" />
+    </RelativeLayout>
+</RelativeLayout>

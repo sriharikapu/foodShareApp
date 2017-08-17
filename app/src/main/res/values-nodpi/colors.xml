@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ff_bg_app">#fff</color>
+    <color name="ff_bg_app_gray">#eee</color>
+    <color name="ff_text_actionbar">@color/ff_text_black</color>
+    <color name="ff_text_actionbar_menu">@color/ff_text_black</color>
+    <color name="ff_bg_actionbar">#F8F8F8</color>
+    <color name="ff_bg_actionbar_pressed">#0000</color>
+    <color name="ff_text_black">#333333</color>
+    <color name="ff_text_gray">#aaaaaa</color>
+    <color name="ff_line">#d2d2d2</color>
+    <color name="ff_alpha">#0000</color>
+</resources>

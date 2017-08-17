@@ -1,0 +1,238 @@
+<com.fengnian.smallyellowo.foodie.View.StickyNavLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/stick_nav_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@id/id_stickynavlayout_topview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/tv_no_net"
+            layout="@layout/includ_userinfo_intnet"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_alignParentTop="true"
+            android:visibility="visible" />
+
+        <RelativeLayout
+            android:id="@+id/head_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/profile_bg_height"
+            android:layout_alignWithParentIfMissing="true"
+            android:layout_below="@+id/tv_no_net"
+            android:background="@mipmap/profile_head_bg">
+
+            <ImageView
+                android:id="@+id/profile_head_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="22dp"
+                android:layout_marginTop="20dp"
+                android:src="@mipmap/profile_head_setting" />
+
+            <View
+                android:id="@+id/no_phone"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="22dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/main_bottom_tip_small"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/profile_head_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/profile_head_setting"
+                android:layout_marginRight="16dp"
+                android:layout_toLeftOf="@+id/profile_head_setting"
+                android:src="@mipmap/profile_head_search" />
+
+            <ImageView
+                android:id="@+id/iv_add_crown"
+                android:layout_width="26dp"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/iv_avatar"
+                android:layout_alignTop="@+id/iv_avatar"
+                android:layout_marginLeft="-5dp"
+                android:layout_marginTop="-17dp"
+                android:src="@mipmap/bg_is_add_crow" />
+
+            <ImageView
+                android:id="@+id/iv_avatar"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="14dp"
+                android:layout_marginStart="24dp"
+                android:background="@drawable/user_avatar_circle_gray"
+                android:scaleType="centerCrop" />
+
+            <ImageView
+                android:id="@+id/tv_sex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/iv_avatar"
+                android:layout_alignRight="@+id/iv_avatar"
+                android:layout_marginBottom="1dp"
+                android:layout_marginRight="4dp"
+                android:src="@drawable/profile_girl_icon" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/iv_avatar"
+                android:layout_marginTop="9dp"
+                android:layout_toRightOf="@+id/iv_avatar"
+                android:textColor="@color/white_bg"
+                android:textSize="@dimen/font_size_5"
+                tools:text="我是昵称" />
+
+            <TextView
+                android:id="@+id/btn_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tv_name"
+                android:layout_marginLeft="7dp"
+                android:layout_toRightOf="@+id/tv_name"
+                android:drawableLeft="@mipmap/profile_btn_edit"
+                android:drawablePadding="3dp"
+                android:paddingBottom="3dp"
+                android:paddingRight="@dimen/padding_small"
+                android:paddingTop="@dimen/padding_small"
+                android:text="编辑资料"
+                android:textColor="@color/color_1"
+                android:textSize="@dimen/font_size_2_1" />
+
+            <TextView
+                android:id="@+id/tv_score_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/iv_avatar"
+                android:layout_toRightOf="@+id/iv_avatar"
+                android:paddingBottom="5dp"
+                android:paddingTop="7dp"
+                android:text="积分"
+                android:textColor="@color/color_1"
+                android:textSize="@dimen/font_size_2_1" />
+
+            <TextView
+                android:id="@+id/tv_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/tv_score_title"
+                android:layout_below="@+id/tv_name"
+                android:layout_toRightOf="@+id/tv_score_title"
+                android:paddingBottom="5dp"
+                android:paddingRight="7dp"
+                android:paddingTop="7dp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/font_size_2_1"
+                tools:text="136" />
+
+            <View
+                android:id="@+id/line_center"
+                android:layout_width="1px"
+                android:layout_height="8dp"
+                android:layout_alignTop="@+id/tv_score"
+                android:layout_marginTop="12dp"
+                android:layout_toRightOf="@+id/tv_score"
+                android:background="@color/color_1" />
+
+            <TextView
+                android:id="@+id/tv_score_shop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/tv_score_title"
+                android:layout_toRightOf="@+id/line_center"
+                android:paddingBottom="5dp"
+                android:paddingLeft="7dp"
+                android:paddingTop="7dp"
+                android:text="积分商城"
+                android:textColor="@color/color_1"
+                android:textSize="@dimen/font_size_2_1" />
+
+            <ImageView
+                android:id="@+id/profile_head_food_record"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="7dp"
+                android:layout_marginRight="13dp"
+                android:scaleType="centerInside"
+                android:src="@mipmap/profile_head_food_record" />
+
+            <View
+                android:id="@+id/red_dot"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_alignRight="@+id/profile_head_food_record"
+                android:layout_alignTop="@+id/profile_head_food_record"
+                android:layout_marginRight="3dp"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/main_bottom_tip_small" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@id/id_stickynavlayout_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/user_tab_height"
+            android:orientation="horizontal">
+
+            <include
+                android:id="@+id/tab_left"
+                layout="@layout/user_tab_item"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <include
+                android:id="@+id/tab_right"
+                layout="@layout/user_tab_item"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/gray_bg_new" />
+
+        <include
+            android:id="@+id/filter_view"
+            layout="@layout/food_filter_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/user_tab_filter_item_height" />
+
+        <View
+            android:id="@+id/filter_view_line"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/normal_bg" />
+    </LinearLayout>
+
+    <com.fengnian.smallyellowo.foodie.View.NoScrollViewPager
+        android:id="@id/id_stickynavlayout_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</com.fengnian.smallyellowo.foodie.View.StickyNavLayout>

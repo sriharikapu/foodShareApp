@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white_bg">
+
+
+    <ImageView
+        android:id="@+id/iv_head"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:scaleType="centerCrop"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+       />
+      <TextView
+          android:id="@+id/tv_nickname"
+          android:layout_marginTop="10dp"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="爱吃的瘦子"
+          android:textSize="14dp"
+          android:textColor="#333"
+          android:layout_below="@+id/iv_head"
+          android:layout_centerHorizontal="true"
+          />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_nickname"
+        android:layout_marginTop="15dp"
+        android:textColor="#ddd"
+        android:text="2018-12-26 15:00"
+        android:textSize="15dp"
+        android:layout_centerHorizontal="true"/>
+    
+    <ImageView
+        android:id="@+id/iv_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#ccc"
+        android:scaleType="centerCrop"
+        android:layout_below="@+id/tv_time"
+        />
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000"
+        android:text="米其林一星餐厅"
+        android:layout_below="@+id/iv_img"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"/>
+
+    <RelativeLayout
+        android:id="@+id/ll_level_container"
+        android:layout_width="300dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_title"
+        android:layout_marginTop="14dp"
+        android:gravity="center"
+
+       >
+
+
+        <RatingBar
+            android:id="@+id/rb_level"
+            android:layout_width="wrap_content"
+            android:layout_height="10dp"
+            android:layout_toLeftOf="@+id/v_line_level"
+            android:isIndicator="true"
+
+            android:maxHeight="10dp"
+            android:minHeight="10dp"
+            android:numStars="4"
+            android:progressDrawable="@drawable/selector_rating_detail"
+            android:rating="2" />
+
+        <View
+            android:id="@+id/v_line_level"
+            android:layout_width="1px"
+            android:layout_height="16dp"
+            android:layout_alignTop="@+id/iv_avatar"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="9dp"
+            android:layout_centerHorizontal="true"
+            android:layout_toLeftOf="@+id/tv_level"
+            android:background="@color/line" />
+
+        <TextView
+            android:id="@+id/tv_level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="极力推荐"
+            android:background="#ccc"
+            android:textColor="@color/ff_text_black"
+            android:textSize="11sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_rest_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/ll_level_container"
+        android:drawableLeft="@mipmap/dynamic_item_rest"
+        android:drawablePadding="6dp"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:text="商家"
+        android:textColor="#333"
+        android:textSize="12dp" />
+
+    <ImageView
+        android:id="@+id/iv_qr_code"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/tv_rest_name"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        android:scaleType="centerCrop"
+        android:background="#000"/>
+
+    <TextView
+        android:id="@+id/tv_1"
+        android:layout_below="@+id/tv_rest_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="长按图片，识别二维码"
+        android:layout_toRightOf="@+id/iv_qr_code"
+        android:textSize="14dp"
+        android:layout_marginTop="35dp"
+        android:textColor="#ddd"
+        android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:id="@+id/tv_2"
+        android:layout_below="@+id/tv_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:text="查看笔记详情"
+        android:layout_toRightOf="@+id/iv_qr_code"
+        android:textSize="14dp"
+        android:textColor="#ddd"
+        android:layout_marginLeft="10dp"/>
+
+    <ImageView
+        android:id="@+id/iv_laucher"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/tv_rest_name"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="10dp"
+        android:src="@mipmap/ic_launcher"/>
+
+</RelativeLayout>

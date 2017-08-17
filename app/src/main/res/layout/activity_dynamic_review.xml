@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".feeddetail.DynamicDetailActivity">
+
+    <com.fengnian.smallyellowo.foodie.widgets.DynamicReviewListView
+        android:id="@+id/listView1"
+        style="@style/listViewTheme"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ll_dynamic_title"
+        android:dividerHeight="0dp" />
+
+    <LinearLayout
+        android:id="@+id/ll_dynamic_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/s_status_bar"
+            android:layout_width="match_parent"
+            android:layout_height="25dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:onClick="onBackPressed"
+                android:scaleType="centerInside"
+                android:src="@mipmap/ff_ic_back_pressed" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="预览"
+                android:textColor="#000"
+                android:textSize="@dimen/ff_text_size_title" />
+
+
+            <TextView
+                android:id="@+id/tv_publish"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:gravity="center"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:text="发布"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/ff_text_black"
+                android:textSize="@dimen/ff_text_size_menu" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/v_title_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/line" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_action_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"></FrameLayout>
+
+    <ImageView
+        android:id="@+id/iv_switch_muban"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="17dp"
+        android:layout_marginRight="19dp"
+        android:src="@mipmap/switch_muban_button" />
+</RelativeLayout>

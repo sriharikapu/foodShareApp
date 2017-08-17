@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/normal_bg"
+    >
+<RelativeLayout
+    android:id="@+id/rl_1"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="#fff"
+    >
+  <ImageView
+      android:id="@+id/iv_back"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:src="@mipmap/back_arrow"
+      android:layout_centerVertical="true"
+      android:padding="15dp"
+     />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:layout_alignParentBottom="true"
+        android:background="#ccc"></View>
+
+    <TextView
+        android:id="@+id/tv_right_title"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:textSize="15dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:textColor="#333"
+        android:text="完成"
+        android:layout_alignParentRight="true"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:textColor="#333"
+        android:text="菜品"
+        android:id="@+id/textView6"
+        android:layout_alignBaseline="@+id/tv_right_title"
+        android:layout_alignBottom="@+id/tv_right_title"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_num_food"
+        android:layout_below="@+id/rl_1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textColor="#333333"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:text="为你识别出3道美食"
+        android:visibility="gone"
+        android:background="#ffe8bb"/>
+
+    <ImageView
+        android:id="@+id/iv_memo_point"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/add_caipin_zhihou"
+        android:layout_marginTop="200dp"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        />
+<!--android:background="@mipmap/memo_point_img"-->
+
+
+    <ListView
+        android:id="@+id/list_view"
+        android:divider="#ccc"
+        android:dividerHeight="0.1dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tv_num_food"
+        android:layout_marginBottom="60dp"
+        />
+    <TextView
+        android:id="@+id/view_bottom"
+        android:layout_below="@+id/list_view"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:gravity="center"
+        android:textColor="#b4b4b4"
+        android:text="你可以在美食编辑页为照片匹配相对应的菜品"
+        android:textSize="15dp"
+        android:layout_marginTop="30dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        />
+
+        <RelativeLayout
+            android:layout_height="55dp"
+            android:background="#efefef"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            >
+            <View
+                android:id="@+id/view_1"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#cfcfcf"></View>
+            <TextView
+                android:id="@+id/tv_add_memo"
+                android:layout_width="wrap_content"
+                android:textColor="#333"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:textSize="16dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center"
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp"
+                android:layout_toLeftOf="@+id/tv_1"
+                android:visibility="gone"
+                android:background="@drawable/pointer_rule_selector"
+                android:text="添加水单"/>
+            <TextView
+                android:id="@+id/tv_1"
+                android:layout_width="0.1dp"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:id="@+id/tv_add_food_name"
+                android:layout_width="wrap_content"
+                android:textColor="#333"
+                android:layout_height="33dp"
+                android:layout_centerVertical="true"
+                android:textSize="16dp"
+                android:layout_marginLeft="20dp"
+                android:gravity="center"
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp"
+                android:background="@drawable/pointer_rule_selector"
+                android:layout_centerHorizontal="true"
+                android:text="添加菜品"/>
+        </RelativeLayout>
+</RelativeLayout>

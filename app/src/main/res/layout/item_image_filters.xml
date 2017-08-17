@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_filters_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#222222"
+    android:clickable="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="78dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingTop="2dp">
+
+            <ImageView
+                android:id="@+id/iv_none"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/ic_filter_none" />
+
+            <FrameLayout
+                android:id="@+id/iv_none_cover"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/iv_none"
+                android:layout_alignLeft="@+id/iv_none"
+                android:layout_alignRight="@+id/iv_none"
+                android:background="@drawable/filter_cover" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@+id/iv_none"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="原图"
+                android:textColor="#fff" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingTop="2dp">
+
+            <ImageView
+                android:id="@+id/iv_xian"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/ic_filter_xian" />
+
+            <FrameLayout
+                android:id="@+id/iv_xian_cover"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/iv_xian"
+                android:layout_alignLeft="@+id/iv_xian"
+                android:layout_alignRight="@+id/iv_xian"
+                android:background="@drawable/filter_cover"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@+id/iv_xian"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="鲜"
+                android:textColor="#fff" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingTop="2dp">
+
+            <ImageView
+                android:id="@+id/iv_su"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/ic_filter_su" />
+
+            <FrameLayout
+                android:id="@+id/iv_su_cover"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/iv_su"
+                android:layout_alignLeft="@+id/iv_su"
+                android:layout_alignRight="@+id/iv_su"
+                android:background="@drawable/filter_cover"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@+id/iv_su"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="素"
+                android:textColor="#fff" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingTop="2dp">
+
+            <ImageView
+                android:id="@+id/iv_nuan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/ic_filter_nuan" />
+
+            <FrameLayout
+                android:id="@+id/iv_nuan_cover"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/iv_nuan"
+                android:layout_alignLeft="@+id/iv_nuan"
+                android:layout_alignRight="@+id/iv_nuan"
+                android:background="@drawable/filter_cover"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@+id/iv_nuan"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="暖"
+                android:textColor="#fff" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingTop="2dp">
+
+            <ImageView
+                android:id="@+id/iv_liang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/ic_filter_liang" />
+
+            <FrameLayout
+                android:id="@+id/iv_liang_cover"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/iv_liang"
+                android:layout_alignLeft="@+id/iv_liang"
+                android:layout_alignRight="@+id/iv_liang"
+                android:background="@drawable/filter_cover"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@+id/iv_liang"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="凉"
+                android:textColor="#fff" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingTop="2dp">
+
+            <ImageView
+                android:id="@+id/iv_ruan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/ic_filter_ruan" />
+
+            <FrameLayout
+                android:id="@+id/iv_ruan_cover"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/iv_ruan"
+                android:layout_alignLeft="@+id/iv_ruan"
+                android:layout_alignRight="@+id/iv_ruan"
+                android:background="@drawable/filter_cover"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@+id/iv_ruan"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="软"
+                android:textColor="#fff" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#1c1e22" />
+
+    <ImageView
+        android:id="@+id/iv_close_filters"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerInside"
+        android:src="@drawable/lsq_style_default_arrow_down" />
+</LinearLayout>

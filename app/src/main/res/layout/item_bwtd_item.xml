@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="83dp">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line" />
+
+    <ImageView
+        android:id="@+id/iv_img"
+        android:layout_width="63dp"
+        android:layout_height="63dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="17dp"
+        android:background="@color/image_bg"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/tv_item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="13dp"
+        android:layout_toEndOf="@+id/iv_img"
+        android:layout_toRightOf="@+id/iv_img"
+        android:text="TextView"
+        android:textColor="@color/ff_text_black"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/tv_poi_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_item_title"
+        android:layout_marginLeft="13dp"
+        android:layout_toEndOf="@+id/iv_img"
+        android:layout_toRightOf="@+id/iv_img"
+        android:drawableLeft="@mipmap/dynamic_item_rest"
+        android:drawablePadding="2dp"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp"
+        android:text="TextView"
+        android:textColor="@color/ff_text_gray"
+        android:textSize="12sp" />
+
+    <ImageView
+        android:id="@+id/iv_avatar"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_alignBottom="@+id/iv_img"
+        android:layout_marginLeft="13dp"
+        android:layout_toEndOf="@+id/iv_img"
+        android:layout_toRightOf="@+id/iv_img"
+        android:background="@drawable/user_avatar_circle_gray" />
+
+    <TextView
+        android:id="@+id/tv_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/iv_avatar"
+        android:layout_alignTop="@+id/iv_avatar"
+        android:layout_marginLeft="4dp"
+        android:layout_toEndOf="@+id/iv_avatar"
+        android:layout_toRightOf="@+id/iv_avatar"
+        android:gravity="center_vertical"
+        android:text="吃遍京城"
+        android:textColor="@color/ff_text_black"
+        android:textSize="11sp" />
+</RelativeLayout>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical">
+    <ImageView
+        android:id="@+id/iv_add_crown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/small_bg_is_add_crow"
+        android:layout_marginLeft="3dp"
+        android:layout_marginBottom="19dp"
+        android:layout_above="@+id/rl_3"
+        android:visibility="gone"
+        android:layout_alignStart="@+id/iv_img" />
+    <ImageView
+        android:id="@+id/iv_img"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="15dp"
+        android:layout_centerVertical="true"
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/iv_img"
+        android:layout_marginRight="60dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/iv_img"
+        android:drawablePadding="6dp"
+        android:singleLine="true"
+        android:text="New Text"
+        android:textColor="@color/ff_text_black"
+        android:textSize="16dp" />
+
+    <RelativeLayout
+        android:id="@+id/rl_3"
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/tv_title"
+        android:layout_toRightOf="@+id/iv_img"
+        android:layout_marginTop="5dp"
+        android:layout_height="wrap_content">
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="90dp"
+        android:gravity="center_horizontal"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_3"
+        android:layout_toEndOf="@+id/iv_img"
+        android:layout_toRightOf="@+id/iv_img"
+        android:text="New Text"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/ff_text_gray"
+        android:textSize="10dp"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:layout_marginBottom="10dp"
+       />
+
+    <TextView
+        android:id="@+id/tv_publish_status"
+        android:layout_width="50dp"
+        android:gravity="center_horizontal"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_title"
+        android:layout_margin="7dp"
+        android:layout_centerVertical="true"
+        android:text="关注"
+
+        android:textColor="@color/ff_text_gray"
+        android:textSize="12dp"
+        android:layout_alignParentRight="true"
+
+        android:visibility="invisible"
+        />
+
+
+
+
+</RelativeLayout>

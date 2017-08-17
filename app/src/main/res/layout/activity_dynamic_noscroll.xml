@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".feeddetail.DynamicDetailActivity">
+
+    <ListView
+        android:id="@+id/listView1"
+        style="@style/listViewTheme"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ll_dynamic_title"
+        android:dividerHeight="0dp" />
+
+    <LinearLayout
+        android:id="@+id/ll_dynamic_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#0000"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/s_status_bar"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:background="#000" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:onClick="onBackPressed"
+                android:scaleType="centerInside"
+                android:src="@mipmap/ff_ic_back_pressed" />
+            <ImageView
+                android:id="@+id/iv_close"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_toRightOf="@+id/iv_back"
+                android:layout_alignParentTop="true"
+                android:onClick="close"
+                android:scaleType="centerInside"
+                android:src="@mipmap/ic_close_three_level_page_black" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="详情"
+                android:textColor="#000"
+                android:textSize="@dimen/ff_text_size_title" />
+
+            <ImageView
+                android:id="@+id/iv_three_point"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:scaleType="centerInside"
+                android:src="@mipmap/ic_three_point_black"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#fff"
+                android:textSize="@dimen/ff_text_size_menu" />
+
+            <ImageView
+                android:id="@+id/iv_menu_attent"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/iv_three_point"
+                android:layout_toStartOf="@+id/iv_three_point"
+                android:scaleType="centerInside"
+                android:src="@mipmap/ic_attented"
+                android:text="New Text"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/v_title_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/line"
+            android:visibility="gone" />
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:id="@+id/fl_action_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"></FrameLayout>
+
+</RelativeLayout>

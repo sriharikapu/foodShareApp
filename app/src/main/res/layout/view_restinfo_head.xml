@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <ImageView
+            android:id="@+id/iv_cover"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@color/image_bg"
+            android:scaleType="centerCrop" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/userinfo_top_imgmeng1" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_weight="2"
+                android:scaleType="centerCrop"
+                android:src="@drawable/userinfo_top_imgmeng2" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/userinfo_top_imgmeng3" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_location"
+            style="@style/userinfo_text_shadow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="16dp"
+            android:drawableLeft="@mipmap/restinfo_location"
+            android:drawablePadding="3dp"
+            android:text="商圈"
+            android:textColor="#fff"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_class"
+            style="@style/userinfo_text_shadow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/tv_location"
+            android:layout_marginLeft="20dp"
+            android:layout_toEndOf="@+id/tv_location"
+            android:layout_toRightOf="@+id/tv_location"
+            android:drawableLeft="@mipmap/restinfo_class"
+            android:drawablePadding="3dp"
+            android:text="分类"
+            android:textColor="#fff"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_per_people"
+            style="@style/userinfo_text_shadow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/tv_class"
+            android:layout_marginLeft="20dp"
+            android:layout_toEndOf="@+id/tv_class"
+            android:layout_toRightOf="@+id/tv_class"
+            android:drawableLeft="@mipmap/restinfo_per_people"
+            android:drawablePadding="3dp"
+            android:text="-/人"
+            android:textColor="#fff"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            style="@style/userinfo_text_shadow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="60dp"
+            android:layout_marginLeft="16dp"
+            android:text="New Text"
+            android:textColor="#fff"
+            android:textSize="20sp" />
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="10dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="40dp"
+            android:layout_marginLeft="16dp"
+            android:isIndicator="true"
+            android:maxHeight="10dp"
+            android:minHeight="10dp"
+            android:numStars="4"
+            android:progressDrawable="@drawable/selector_rating_dynamic"
+            android:rating="2.5" />
+
+        <TextView
+            android:id="@+id/tv_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/ratingBar"
+            android:layout_marginBottom="-4dp"
+            android:layout_marginLeft="5dp"
+            android:layout_toEndOf="@+id/ratingBar"
+            android:layout_toRightOf="@+id/ratingBar"
+            android:text="3.5"
+            android:textColor="#ffffff"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/btn_want_eat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="16dp"
+            android:background="@null"
+            android:paddingBottom="2dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingTop="2dp"
+            android:text="想吃"
+            android:textColor="#fff" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/line_phone"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line" />
+
+    <TextView
+        android:id="@+id/tv_address"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:drawableLeft="@mipmap/ic_location"
+        android:drawablePadding="12dp"
+        android:drawableRight="@mipmap/restinfo_right_arrow"
+        android:gravity="center_vertical"
+        android:lines="1"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:text="New Text"
+        android:textColor="@color/ff_text_black"
+        android:textSize="14sp" />
+
+    <View
+        android:id="@+id/line_address"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line" />
+
+    <TextView
+        android:id="@+id/tv_phone"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:drawableLeft="@mipmap/ic_phone"
+        android:drawablePadding="12dp"
+        android:drawableRight="@mipmap/restinfo_right_arrow"
+        android:gravity="center_vertical"
+        android:lines="1"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:text="New Text"
+        android:textColor="@color/ff_text_black"
+        android:textSize="14sp" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:background="@color/ff_bg_app_gray" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line" />
+
+    <include layout="@layout/view_rest_remark" />
+</LinearLayout>

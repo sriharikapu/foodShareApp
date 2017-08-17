@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.fengnian.smallyellowo.foodie.personal.ProfileSearchTitleRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/user_tab_height"
+    android:background="@color/color_8"
+    android:gravity="center_vertical">
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:paddingLeft="@dimen/padding_middle"
+        android:paddingRight="@dimen/padding_middle"
+        android:src="@mipmap/ff_ic_back_pressed" />
+
+    <EditText
+        android:id="@+id/et_input"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/tv_cancel"
+        android:layout_toRightOf="@+id/iv_back"
+        android:background="@drawable/profile_search_bg"
+        android:drawableLeft="@mipmap/discover_search"
+        android:drawablePadding="7dp"
+        android:gravity="center_vertical"
+        android:hint="请输入搜索内容"
+        android:imeOptions="actionSearch"
+        android:paddingLeft="16dp"
+        android:paddingRight="36dp"
+        android:singleLine="true"
+        android:textColor="@color/title_text_color"
+        android:textColorHint="@color/color_7"
+        android:textCursorDrawable="@drawable/profile_search_cursor"
+        android:textSize="13sp" />
+
+    <ImageView
+        android:id="@+id/iv_clear"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_alignRight="@+id/et_input"
+        android:layout_centerVertical="true"
+        android:scaleType="centerInside"
+        android:src="@mipmap/search_clear" />
+
+    <TextView
+        android:id="@+id/tv_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:paddingLeft="@dimen/padding_middle"
+        android:paddingRight="@dimen/padding_middle"
+        android:text="取消"
+        android:textColor="@color/title_text_color"
+        android:textSize="@dimen/font_size_3" />
+</com.fengnian.smallyellowo.foodie.personal.ProfileSearchTitleRelativeLayout>
+

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/friend_serarh_bg"
+        android:layout_marginBottom="20dp"
+        >
+        <ImageView
+            android:id="@+id/iv_dismiss"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/iv_remarkname_dismiss"
+            android:layout_alignParentRight="true"
+            android:padding="10dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:textSize="17dp"
+            android:textColor="#333"
+            android:text="修改好友备注"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_1"
+            android:layout_below="@+id/tv_1"
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp">
+        <EditText
+            android:id="@+id/ed_remarkname"
+            android:layout_width="match_parent"
+            android:background="@drawable/edit_remarkname_bg"
+            android:layout_height="34dp"
+            android:paddingLeft="6dp"
+            android:hint="请输入好友备注"
+            android:textColorHint="#ccc"
+            android:singleLine="true"
+            android:textColor="#333"
+            android:textSize="12dp"
+            />
+
+        <ImageView
+            android:id="@+id/iv_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="8dp"
+            android:src="@mipmap/delete_img"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_commit"
+            android:layout_below="@+id/rl_1"
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:textColor="#333"
+            android:textSize="14dp"
+            android:background="@drawable/login_normal"
+            android:layout_marginRight="30dp"
+            android:gravity="center"
+            android:text="确定修改"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="39dp"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#fff"></View>
+
+</LinearLayout>

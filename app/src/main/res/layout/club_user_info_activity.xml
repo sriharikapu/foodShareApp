@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/inc_1"
+        layout="@layout/includ_userinfo_intnet" />
+
+
+    <ListView
+        android:id="@+id/ry_recycle_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/inc_1"
+        android:background="@color/transparent"
+        android:cacheColorHint="@color/transparent"
+        android:divider="#00000000"
+        android:dividerHeight="0dip" />
+
+    <View
+        android:id="@+id/s_status_bar"
+        android:layout_width="match_parent"
+        android:layout_height="25dp" />
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/inc_1"
+        android:background="#0000">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:scaleType="centerInside"
+            android:src="@mipmap/ff_ic_back_normal" />
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_toRightOf="@+id/iv_back"
+            android:onClick="close"
+            android:scaleType="centerInside"
+            android:src="@mipmap/ic_close_three_level_page_white" />
+
+        <TextView
+            android:id="@+id/tv_nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text=""
+            android:textColor="#333"
+            android:textSize="18dp" />
+
+    </RelativeLayout>
+</RelativeLayout>

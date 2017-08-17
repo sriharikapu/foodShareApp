@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="@dimen/ff_actionbarHight"
+    android:background="@drawable/ff_selector_button_actionbar_background"
+    android:contentDescription="@string/app_name"
+    android:gravity="center"
+    android:minWidth="@dimen/ff_actionbarHight"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:textColor="@color/ff_text_actionbar_menu"
+    android:textSize="@dimen/ff_text_size_menu" />

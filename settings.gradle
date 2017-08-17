@@ -1,0 +1,2 @@
+include ':app', ':TuSDKUIDefault1', ':PushSDK', ':lib'
+project(':TuSDKUIDefault1').projectDir = new File('TuSDKUIDefault')

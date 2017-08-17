@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="8dp"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="11dp"
+        android:background="#f2f2f2" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="18dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="7dp"
+        android:paddingRight="7dp"
+        android:paddingTop="12dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_club_line" />
+
+        <TextView
+            android:id="@+id/tv_item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="我们一起吃遍全北京"
+            android:textColor="@color/ff_text_black"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <com.fengnian.smallyellowo.foodie.widgets.CircleImageView
+        android:layout_width="match_parent"
+        android:layout_marginLeft="7dp"
+        android:id="@+id/iv_img"
+        android:layout_marginRight="7dp"
+        android:scaleType="centerCrop"
+        android:background="@color/image_bg"
+        android:layout_height="143dp" />
+</LinearLayout>

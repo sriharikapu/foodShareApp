@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white_bg"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/item_qq"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:src="@mipmap/icon_login_qq" />
+
+    <TextView
+        android:id="@+id/item_qq_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="12dp"
+        android:layout_toRightOf="@id/item_qq"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="QQ"
+        android:textColor="@color/title_text_color"
+        android:textSize="14sp" />
+
+    <ImageView
+        android:id="@+id/right_qq_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="15dp"
+        android:src="@mipmap/chakan_arrow_right" />
+
+    <com.fengnian.smallyellowo.foodie.emoji.CustomEmojiTextView
+        android:id="@+id/account_qq_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@id/right_qq_image"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="马上绑定"
+        android:textColor="@color/text_food_list_color_press"
+        android:textSize="13sp" />
+
+    <View
+        android:id="@+id/bottom_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="15dp"
+        android:background="@color/line" />
+</RelativeLayout>

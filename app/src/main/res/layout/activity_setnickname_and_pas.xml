@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
+        <ImageView
+            android:id="@+id/iv_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/arrow_left_one"
+            android:layout_centerVertical="true"
+            android:padding="15dp"/>
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:textSize="14dp"
+            android:textColor="#333"
+            android:text=""
+            />
+        <TextView
+            android:id="@+id/tv_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textSize="13dp"
+            android:text="下一步"
+            android:layout_centerVertical="true"
+            android:textColor="#ddd"
+            android:clickable="false"
+            android:padding="15dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:textColor="#333"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:text="欢迎加入小黄圈"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_3"
+        android:layout_width="match_parent"
+        android:layout_marginTop="30dp"
+        android:layout_height="39dp">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#ddd"
+            ></View>
+        <RelativeLayout
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+        <TextView
+            android:id="@+id/tv_3_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="*"
+            android:textSize="15dp"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:textColor="#ff0000"/>
+        <TextView
+            android:id="@+id/tv_3_2"
+            android:layout_toRightOf="@+id/tv_3_1"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:textSize="14dp"
+            android:textColor="#333"
+            android:text="昵称"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/ed_nickname"
+            android:maxLength="16"
+            android:hint="输入昵称"
+            android:paddingLeft="10dp"
+            android:singleLine="true"
+            android:layout_width="150dp"
+            android:background="@null"
+            android:textColorHint="#ddd"
+            android:textColor="#333"
+            android:textSize="14dp"
+            android:layout_toRightOf="@+id/tv_3_2"
+            android:textCursorDrawable="@drawable/profile_login_editer"
+            android:layout_height="match_parent" />
+        </RelativeLayout>
+        <ImageView
+            android:id="@+id/iv_pas_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="20dp"
+            android:visibility="gone"
+            android:src="@drawable/ed_text_delte"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#ddd"
+            android:layout_alignParentBottom="true"
+            ></View>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:id="@+id/tv_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_1"
+                android:layout_marginLeft="15dp"
+                android:text="点击下一步即默认"
+                android:textColor="#aaa"
+                android:textSize="10dp" />
+
+            <TextView
+                android:id="@+id/tv_agreement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_1"
+                android:layout_toRightOf="@+id/tv_5"
+                android:paddingLeft="5dp"
+                android:text="用户协议"
+                android:textColor="#eb6762"
+                android:textSize="10dp" />
+
+            <View
+                android:id="@+id/tv_lin"
+                android:layout_width="40dp"
+                android:layout_height="0.1dp"
+                android:layout_below="@+id/tv_agreement"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/tv_5"
+                android:background="#eb6762" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:id="@+id/tv_edit_pas_invite_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textColor="#007aff"
+            android:textSize="10dp"
+            android:padding="15dp"
+            android:text="编辑密码和邀请码"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_set_pasword"
+        android:layout_width="match_parent"
+        android:layout_marginTop="30dp"
+        android:visibility="gone"
+        android:layout_height="39dp">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#ddd"
+            ></View>
+        <RelativeLayout
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+            <TextView
+                android:id="@+id/tv_4_2"
+                android:layout_marginLeft="10dp"
+                android:layout_centerVertical="true"
+                android:textSize="14dp"
+                android:textColor="#333"
+                android:text="设置登录密码"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/ed_password"
+                android:hint="请输入6-16位非特殊字符"
+                android:textCursorDrawable="@drawable/profile_login_editer"
+                android:paddingLeft="10dp"
+                android:maxLength="16"
+                android:singleLine="true"
+                android:layout_width="match_parent"
+                android:background="@null"
+                android:textColorHint="#ddd"
+                android:inputType="textPassword"
+                android:textColor="#333"
+                android:textSize="14dp"
+                android:layout_toRightOf="@+id/tv_4_2"
+                android:layout_height="match_parent" />
+        </RelativeLayout>
+        <ImageView
+            android:id="@+id/iv_is_password_show"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="20dp"
+            android:src="@mipmap/iv_set_password_type"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#ddd"
+            android:layout_alignParentBottom="true"
+            ></View>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_invite_code"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="39dp">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+            <TextView
+                android:id="@+id/tv_5_2"
+                android:layout_marginLeft="10dp"
+                android:layout_centerVertical="true"
+                android:textSize="14dp"
+                android:textColor="#333"
+                android:text="邀请码"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/ed_invite_code"
+                android:maxLength="4"
+                android:hint="选填项,若没有可不填"
+                android:textCursorDrawable="@drawable/profile_login_editer"
+                android:paddingLeft="10dp"
+                android:singleLine="true"
+                android:layout_width="150dp"
+                android:background="@null"
+                android:textColorHint="#ddd"
+                android:textColor="#333"
+                android:textSize="14dp"
+                android:layout_toRightOf="@+id/tv_5_2"
+                android:layout_height="match_parent" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#ddd"
+            android:layout_alignParentBottom="true"
+            ></View>
+    </RelativeLayout>
+</LinearLayout>

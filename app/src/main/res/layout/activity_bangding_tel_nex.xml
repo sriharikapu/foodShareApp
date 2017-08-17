@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/normal_bg">
+
+    <RelativeLayout
+        android:id="@+id/rl_1"
+        android:layout_marginTop="17dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white_bg">
+        <RelativeLayout
+            android:id="@+id/rl_1_1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <TextView
+                android:id="@+id/tv_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:gravity="center"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:textColor="#ff0000"/>
+            <TextView
+                android:id="@+id/tv_1_1"
+                android:layout_toRightOf="@+id/tv_1"
+                android:layout_marginLeft="10dp"
+                android:layout_centerVertical="true"
+                android:textSize="15dp"
+                android:textColor="#333"
+                android:text="手机号   "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:background="#ccc"
+                android:layout_alignParentBottom="true"
+                ></View>
+
+            <EditText
+                android:id="@+id/ed_phone"
+                android:inputType="phone"
+                android:maxLength="11"
+                android:hint="请输入手机号"
+                android:textSize="14dp"
+                android:textColorHint="#ddd"
+                android:textCursorDrawable="@drawable/edtext_cursor_style"
+                android:paddingLeft="10dp"
+                android:layout_width="match_parent"
+                android:background="@null"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="91dp"
+                />
+            <ImageView
+                android:id="@+id/iv_phone_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ed_text_delte"
+                android:padding="20dp"
+                android:visibility="gone"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rl_2"
+            android:layout_below="@+id/rl_1_1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <TextView
+                android:id="@+id/tv_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:gravity="center"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:textColor="#ff0000"/>
+
+            <EditText
+                android:id="@+id/ed_verification_code"
+                android:inputType="phone"
+                android:maxLength="4"
+                android:paddingLeft="10dp"
+                android:layout_toRightOf="@+id/tv_2_2"
+                android:layout_width="match_parent"
+                android:hint="请输入验证码"
+                android:singleLine="true"
+                android:textCursorDrawable="@drawable/edtext_cursor_style"
+                android:maxLines="4"
+                android:textColor="#333"
+                android:textColorHint="#ddd"
+                android:textSize="14dp"
+                android:background="@null"
+                android:layout_height="match_parent" />
+            <View
+                android:layout_toLeftOf="@+id/tv_send_verification_code"
+                android:id="@+id/line_1"
+                android:layout_width="0.1dp"
+                android:layout_height="match_parent"
+                android:background="#ccc"></View>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:background="#ccc"
+                android:layout_alignParentBottom="true"
+                android:id="@+id/view3"></View>
+
+            <TextView
+                android:id="@+id/tv_2_2"
+                android:layout_marginLeft="10dp"
+                android:textSize="15dp"
+                android:textColor="#333"
+                android:text="验证码   "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/tv_2"
+                />
+            <ImageView
+                android:id="@+id/iv_code_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/tv_send_verification_code"
+                android:padding="20dp"
+                android:visibility="gone"
+                android:src="@drawable/ed_text_delte"/>
+            <TextView
+                android:id="@+id/tv_send_verification_code"
+                android:layout_width="130dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="#365796"
+                android:textSize="15dp"
+                android:background="@drawable/item_contact_friend_selector"
+                android:text="发送验证码"
+                android:layout_above="@+id/view3"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_3"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/rl_2"
+            android:layout_height="50dp">
+            <TextView
+                android:id="@+id/tv_3_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:gravity="center"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:textColor="#ff0000"/>
+            <TextView
+                android:id="@+id/tv_3_2"
+                android:layout_toRightOf="@+id/tv_3_1"
+                android:layout_marginLeft="10dp"
+                android:layout_centerVertical="true"
+                android:textSize="15dp"
+                android:textColor="#333"
+                android:text="登录密码"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/ed_password"
+                android:inputType="textPassword"
+                android:maxLength="11"
+                android:hint="不少于6位数"
+                android:textCursorDrawable="@drawable/edtext_cursor_style"
+                android:paddingLeft="10dp"
+                android:singleLine="true"
+                android:layout_width="match_parent"
+                android:background="@null"
+                android:textColorHint="#ddd"
+                android:textColor="#333"
+                android:textSize="14dp"
+                android:layout_marginLeft="91dp"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:id="@+id/iv_pas_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:padding="20dp"
+                android:visibility="gone"
+                android:src="@drawable/ed_text_delte"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.1dp"
+                android:background="#ccc"
+                android:layout_alignParentBottom="true"
+                ></View>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+
+    <TextView
+        android:id="@+id/tv_regist_next"
+        android:textSize="16dp"
+        android:gravity="center"
+        android:textColor="#333"
+        android:text="完成"
+        android:layout_marginTop="60dp"
+        android:layout_width="330dp"
+        android:layout_height="44dp"
+        android:background="@drawable/login_selector"
+        android:layout_below="@+id/rl_1"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>

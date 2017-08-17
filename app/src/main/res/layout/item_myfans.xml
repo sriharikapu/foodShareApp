@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/rl_1"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv_add_crown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="18dp"
+        android:visibility="gone"
+        android:background="@mipmap/small_bg_is_add_crow"/>
+<ImageView
+    android:id="@+id/iv_header"
+    android:layout_width="48dp"
+    android:layout_height="48dp"
+    android:scaleType="centerCrop"
+    android:layout_marginLeft="15dp"
+    android:layout_marginTop="10dp"
+    />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLength="10"
+        android:layout_marginTop="10dp"
+        android:textSize="15dp"
+        android:layout_marginLeft="75dp"
+        android:textColor="@color/title_text_color"
+        android:text="lallalalal"/>
+      <TextView
+          android:id="@+id/tv_1"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="关注了你"
+          android:layout_marginTop="10dp"
+          android:layout_marginLeft="10dp"
+          android:textColor="#888"
+          android:textSize="15dp"
+          android:layout_toRightOf="@+id/tv_name"
+          />
+
+    <TextView
+        android:id="@+id/tv_sign"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#989898"
+        android:layout_marginTop="10dp"
+        android:textSize="12dp"
+        android:maxLength="30"
+        android:layout_below="@+id/tv_name"
+        android:layout_marginLeft="75dp"
+        android:layout_marginRight="100dp"/>
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_sign"
+        android:layout_marginTop="10dp"
+        android:textSize="11dp"
+        android:textColor="#aaa"
+        android:layout_marginLeft="75dp"
+        />
+
+    <ImageView
+        android:id="@+id/iv_is_attion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:background="@mipmap/my_eacher_attion"
+        />
+    
+   <View
+        android:id="@+id/view_bottom_xian"
+        android:layout_below="@+id/tv_date"
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:layout_marginLeft="75dp"
+        android:layout_marginTop="5dp"
+        android:background="#ddd"
+       ></View>
+
+
+
+</RelativeLayout>

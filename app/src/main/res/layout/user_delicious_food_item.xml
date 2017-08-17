@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/item_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginBottom="12dp"
+            android:layout_marginLeft="@dimen/padding_small"
+            android:layout_marginRight="@dimen/padding_middle"
+            android:layout_marginTop="12dp"
+            android:background="@color/image_bg"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/image"
+            android:layout_toRightOf="@+id/image"
+            android:ellipsize="end"
+            android:lines="1"
+            android:text="好吃的葱油饼"
+            android:textColor="@color/title_text_color"
+            tools:textSize="@dimen/font_size_5" />
+
+        <RatingBar
+            android:id="@+id/rating_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="10dp"
+            android:layout_below="@+id/tv_title"
+            android:layout_marginLeft="1dp"
+            android:layout_marginTop="7dp"
+            android:layout_toRightOf="@+id/image"
+            android:isIndicator="true"
+            android:numStars="4"
+            android:progressDrawable="@drawable/selector_rating_detail"
+            android:rating="2" />
+
+        <TextView
+            android:id="@+id/tv_business_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rating_bar"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/image"
+            android:drawableLeft="@mipmap/profile_business_icon"
+            android:drawablePadding="7dp"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:lines="1"
+            android:textColor="@color/color_3"
+            android:textSize="@dimen/font_size_3_1"
+            tools:text="将台路阿大葱油饼旗舰店" />
+
+        <TextView
+            android:id="@+id/tv_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/image"
+            android:layout_toRightOf="@+id/image"
+            android:ellipsize="end"
+            android:lines="1"
+            android:textColor="@color/color_3"
+            android:textSize="@dimen/font_size_2"
+            tools:text="将台路" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/image"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="30dp"
+            android:ellipsize="end"
+            android:lines="1"
+            android:textColor="@color/color_3"
+            android:textSize="@dimen/font_size_2"
+            tools:text="12-21" />
+
+        <ImageView
+            android:id="@+id/profile_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/image"
+            android:layout_marginLeft="@dimen/padding_tiny"
+            android:layout_marginTop="1dp"
+            android:layout_toRightOf="@+id/tv_title"
+            android:src="@mipmap/profile_camera" />
+
+        <TextView
+            android:id="@+id/tv_pic_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/image"
+            android:layout_alignRight="@+id/image"
+            android:layout_marginBottom="2dp"
+            android:layout_marginRight="2dp"
+            android:background="@drawable/profile_item_food_bg"
+            android:paddingBottom="2dp"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:paddingTop="2dp"
+            android:textColor="@color/white_bg"
+            android:textSize="@dimen/font_size_1"
+            tools:text="36" />
+
+        <TextView
+            android:id="@+id/tv_share_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@color/gray_bg_new"
+            android:paddingBottom="4dp"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:paddingTop="4dp"
+            android:text="未分享"
+            android:textColor="@color/color_1"
+            android:textSize="@dimen/font_size_1_1" />
+
+        <TextView
+            android:id="@+id/profile_un_save_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="24dp"
+            android:background="@mipmap/profile_un_save_btn" />
+
+        <com.fengnian.smallyellowo.foodie.View.RotationLoadingView
+            android:id="@+id/rotation_loadingview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="29dp" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/line_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/image"
+        android:background="@color/gray_bg_new" />
+
+    <com.fengnian.smallyellowo.foodie.View.RecyclerLoadMoreFooterView
+        android:id="@+id/recycler_load_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp" />
+</LinearLayout>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f3f3f3"
+    android:orientation="vertical"
+    android:paddingTop="15dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        android:layout_weight="1">
+
+
+        <ImageView
+            android:id="@+id/iv_img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/iv_avator"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="-15dp"
+            android:scaleType="matrix" />
+
+
+        <View
+            android:id="@+id/v_info_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/iv_avator"
+            android:layout_marginTop="15dp"
+            android:background="#fff" />
+
+        <TextView
+            android:id="@+id/tv_poi_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="25dp"
+            android:drawableLeft="@mipmap/cover_rest_ic"
+            android:drawablePadding="5dp"
+            android:text="餐厅"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tv_poi_title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="11dp"
+            android:text="标题"
+            android:textSize="15sp" />
+
+
+        <ImageView
+            android:id="@+id/iv_add_crown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tv_title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="55dp"
+            android:paddingRight="40dp"
+            android:src="@mipmap/bg_is_add_crow"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/iv_avator"
+            android:layout_width="53dp"
+            android:layout_height="53dp"
+            android:layout_above="@+id/tv_title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/user_avatar_circle"
+            android:padding="2dp"
+            android:src="@mipmap/moren_head_img" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/strok_cover">
+
+        </FrameLayout>
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_imgs"
+        android:layout_width="match_parent"
+        android:layout_height="116dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="22dp" />
+</LinearLayout>

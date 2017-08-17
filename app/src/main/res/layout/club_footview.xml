@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_one_no_intnet"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_below="@+id/rl_title"
+        android:background="#fff"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_ry_recycle_no_intnet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/geren_jiazaishibai_img" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_1_1"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:background="#fff"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_centerHorizontal="true"
+            android:drawablePadding="5dp"
+            android:drawableRight="@mipmap/chakan_arrow_right"
+            android:gravity="center"
+            android:text="查看更多内容"
+            android:textColor="#888"
+            android:textSize="13dp" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view_1_1"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_below="@+id/rl_1"
+        android:background="@color/normal_bg"></View>
+
+    <RelativeLayout
+        android:id="@+id/rl_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_club_dongtai_fail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:src="@mipmap/club_dongtai_fail"
+            android:visibility="gone" />
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioGroup
+
+            android:id="@+id/rg_tab"
+            android:layout_width="278dp"
+            android:layout_height="28dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/userinfo_tab_check_bg"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_class"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/userinfo_tab_check_left"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="品类"
+                android:textColor="@color/userinfo_tab"
+                android:textSize="12dp" />
+
+            <RadioButton
+                android:id="@+id/rb_area"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/userinfo_tab_check_right"
+                android:button="@null"
+                android:gravity="center"
+                android:text="区域"
+                android:textColor="@color/userinfo_tab"
+                android:textSize="12dp" />
+        </RadioGroup>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/fl_area"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rg_tab"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="16dp"
+            android:src="@mipmap/to_top" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/fl_class"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rg_tab"
+        android:layout_marginBottom="30dp">
+
+        <com.fengnian.smallyellowo.foodie.widgets.PieChart
+            android:id="@+id/pc_class"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.fengnian.smallyellowo.foodie.widgets.ArcVisView
+            android:id="@+id/avv_meng"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true" />
+
+        <LinearLayout
+            android:id="@+id/ll_class_info"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="150dp"
+            android:orientation="vertical"
+            android:visibility="invisible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:text="品类"
+                android:textColor="@color/ff_text_gray"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="11dp"
+                android:text="美食清单"
+                android:textColor="@color/ff_text_black"
+                android:textSize="17sp" />
+
+            <ImageView
+                android:id="@+id/iv_top"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@mipmap/top1" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_no"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:background="@mipmap/contact_is_kong" />
+
+            <TextView
+                android:id="@+id/tv_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text="他还没有美食记录"
+                android:textColor="#999"
+                android:textSize="14dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        android:background="#fff"></View>
+</LinearLayout>

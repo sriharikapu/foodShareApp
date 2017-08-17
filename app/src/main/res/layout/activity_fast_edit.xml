@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f3f3f3"
+    tools:context="com.fengnian.smallyellowo.foodie.FastEditActivity">
+
+    <RelativeLayout
+        android:id="@+id/actionBar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/ff_bg_actionbar"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/ff_selector_button_actionbar_background"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:onClick="onBackPressed"
+            android:scaleType="center"
+            android:src="@mipmap/ff_ic_back_pressed"
+            android:text="取消"
+            android:textColor="@color/ff_text_actionbar_menu"
+            android:textSize="@dimen/ff_text_size_menu" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/line" />
+
+        <TextView
+            android:id="@+id/tv_publish"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/ff_selector_button_actionbar_background"
+            android:gravity="center"
+            android:scaleType="center"
+            android:src="@mipmap/ff_ic_back_pressed"
+            android:text="发布"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/ff_text_size_menu" />
+
+        <TextView
+            android:id="@+id/tv_actionbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="美食速记"
+            android:textColor="@color/ff_text_actionbar"
+            android:textSize="@dimen/ff_text_size_title" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/actionBar"
+        android:orientation="vertical">
+
+        <com.fengnian.smallyellowo.foodie.widgets.MyRecyclerView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:descendantFocusability="beforeDescendants"
+            android:divider="@null"></com.fengnian.smallyellowo.foodie.widgets.MyRecyclerView>
+
+        <FrameLayout
+            android:id="@+id/fl_emoji_btn_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ddd"
+            android:paddingBottom="5dip"
+            android:paddingTop="5dip"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/emoji_panel_show"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="right"
+                android:layout_marginLeft="5dip"
+                android:layout_marginRight="5dip"
+                android:layout_toLeftOf="@+id/button"
+                android:scaleType="centerInside"
+                android:src="@drawable/emoji_panel_show" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="right"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <ImageView
+                android:id="@+id/iv_share"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_rich_text_bottom"
+                android:scaleType="center"
+                android:src="@mipmap/ic_ue_share" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

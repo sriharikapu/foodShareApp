@@ -1,0 +1,7 @@
+<resources>
+    <!--此文件夹适配的大于等于(包含)720P 并且 小于(不包含)1080P分辨率之间-->
+    <!--<dimen name="aaa_height">2px</dimen>-->
+    <dimen name="vertical_textview_height">80dp</dimen>
+    <dimen name="sku_shop_image_size">120dip</dimen>
+    <dimen name="dining_all_empty_bottom_marge">40dp</dimen>
+</resources>

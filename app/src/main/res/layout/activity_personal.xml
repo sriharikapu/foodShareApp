@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/normal_bg">
+   <RelativeLayout
+       android:id="@+id/rl_head"
+       android:layout_marginTop="10dp"
+       android:background="@drawable/item_contact_friend_selector"
+       android:layout_width="match_parent"
+       android:layout_height="80dp">
+       <View
+           android:id="@+id/view1"
+           android:layout_width="match_parent"
+           android:layout_height="0.1dp"
+           android:background="#ddd"></View>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height= "wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        android:textSize="15dp"
+        android:textColor="#333333"
+        android:text="头像"/>
+       <ImageView
+           android:id="@+id/iv_header"
+           android:layout_width="50dp"
+           android:layout_height="50dp"
+           android:layout_alignParentRight="true"
+           android:scaleType="centerCrop"
+           android:layout_centerVertical="true"
+           android:layout_marginRight="40dp"/>
+
+       <View
+           android:layout_width="match_parent"
+           android:layout_height="0.1dp"
+           android:layout_marginLeft="15dp"
+           android:layout_alignParentBottom="true"
+           android:background="@color/normal_bg"></View>
+
+       <ImageView
+           android:layout_width="8dp"
+           android:layout_height="14dp"
+           android:layout_marginRight="9dp"
+           android:src="@mipmap/arrow_left"
+           android:layout_centerVertical="true"
+           android:layout_alignParentRight="true"
+            />
+   </RelativeLayout>
+
+    <RelativeLayout
+    android:id="@+id/rl_bg"
+    android:layout_below="@+id/rl_head"
+    android:background="@drawable/item_contact_friend_selector"
+    android:layout_width="match_parent"
+
+    android:layout_height="80dp">
+
+        <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:layout_marginLeft="15dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/normal_bg"
+            android:id="@+id/view5"></View>
+
+    <ImageView
+        android:layout_width="8dp"
+        android:layout_height="14dp"
+        android:layout_marginRight="9dp"
+        android:src="@mipmap/arrow_left"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:id="@+id/imageView5" />
+
+        <ImageView
+            android:id="@+id/iv_bg"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="22dp"
+            android:background="@mipmap/moyen_bg_img"
+            android:layout_marginEnd="22dp"
+            android:layout_centerVertical="true"
+            android:scaleType="centerCrop"
+            android:layout_toLeftOf="@+id/imageView5"
+            android:layout_toStartOf="@+id/imageView5" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height= "wrap_content"
+            android:textSize="15dp"
+            android:textColor="#333333"
+            android:text="背景"
+            android:layout_centerVertical="true"
+            android:layout_alignLeft="@+id/view5"
+            android:layout_alignStart="@+id/view5"
+            android:id="@+id/textView10" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_nickname"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/rl_bg"
+        android:background="@drawable/item_contact_friend_selector"
+        android:layout_width="match_parent"
+
+        android:layout_height="42dp">
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height= "wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:textSize="15dp"
+            android:textColor="#333333"
+            android:text="昵称"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_marginLeft="15dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/normal_bg"></View>
+
+        <TextView
+            android:id="@+id/tv_nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="9dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/imageView6"
+            android:drawablePadding="10dp"
+            android:textSize="16dp"
+            android:textColor="#cdcdcd"
+            android:text="刘德华" />
+
+        <ImageView
+
+            android:layout_width="8dp"
+            android:layout_height="14dp"
+            android:layout_marginRight="9dp"
+            android:src="@mipmap/arrow_left"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:id="@+id/imageView6" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_sex"
+        android:layout_below="@+id/rl_nickname"
+        android:background="@drawable/item_contact_friend_selector"
+        android:layout_width="match_parent"
+
+        android:layout_height="42dp">
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height= "wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:textSize="15dp"
+            android:textColor="#333333"
+            android:text="性别"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_marginLeft="15dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/normal_bg"></View>
+
+        <TextView
+            android:id="@+id/tv_sex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="9dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/imageView7"
+            android:textSize="16dp"
+            android:textColor="#cdcdcd"
+            android:text="男" />
+        <ImageView
+
+            android:layout_width="8dp"
+            android:layout_height="14dp"
+            android:layout_marginRight="9dp"
+            android:src="@mipmap/arrow_left"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:id="@+id/imageView7" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rl_personal_declaration"
+        android:layout_below="@+id/rl_sex"
+        android:background="@drawable/item_contact_friend_selector"
+        android:layout_width="match_parent"
+
+        android:layout_height="42dp">
+        <TextView
+          android:id="@+id/tv_5"
+            android:layout_width="wrap_content"
+            android:layout_height= "wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:textSize="15dp"
+            android:textColor="#333333"
+            android:text="个人宣言"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_marginLeft="15dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/normal_bg"></View>
+
+        <TextView
+            android:id="@+id/tv_personal_declaration"
+            android:layout_toRightOf="@+id/tv_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="9dp"
+            android:singleLine="true"
+            android:layout_centerVertical="true"
+            android:gravity="right"
+            android:layout_toLeftOf="@+id/imageView8"
+            android:drawablePadding="10dp"
+            android:textSize="16dp"
+            android:textColor="#cdcdcd"
+            android:text="刘德华" />
+
+        <ImageView
+
+            android:layout_width="8dp"
+            android:layout_height="14dp"
+            android:layout_marginRight="9dp"
+            android:src="@mipmap/arrow_left"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:id="@+id/imageView8" />
+    </RelativeLayout>
+
+</RelativeLayout>

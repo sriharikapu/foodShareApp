@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="12dp"
+    android:paddingLeft="@dimen/padding_middle"
+    android:paddingRight="@dimen/padding_middle"
+    android:paddingTop="20dp">
+
+    <TextView
+        android:id="@+id/title_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="几人吃"
+        android:textColor="@color/title_text_color"
+        android:textSize="@dimen/font_size_9" />
+
+    <TextView
+        android:id="@+id/title_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="吃什么"
+        android:textColor="@color/color_1"
+        android:textSize="@dimen/font_size_3_2" />
+</LinearLayout>

@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#F3f3f3"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_cover"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/detail_cover_height"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@color/image_bg"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:id="@+id/iv_add_crown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/iv_avator"
+            android:layout_alignTop="@+id/iv_avator"
+            android:layout_marginLeft="-3dp"
+            android:layout_marginTop="-3dp"
+            android:src="@mipmap/small_bg_is_add_crow"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/iv_avator"
+            android:layout_width="58dp"
+            android:layout_height="58dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="90dp"
+            android:background="@drawable/user_avatar_circle_with_alpha"
+            android:padding="1.5dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/user_avatar_circle_gray" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_avator"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:text="名字"
+            android:textColor="#fff"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/snap_bg"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_cover"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:text="title"
+            android:textColor="@color/ff_text_black"
+            android:textSize="19sp" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_title"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="6dp"
+            android:text="时间: 2016-8-9 15:20"
+            android:textColor="#aaaaaa"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:id="@+id/ll_level_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_time"
+            android:layout_marginBottom="14dp"
+            android:layout_marginTop="14dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <RatingBar
+                android:id="@+id/rb_level"
+                android:layout_width="wrap_content"
+                android:layout_height="10dp"
+                android:layout_alignTop="@+id/iv_avatar"
+                android:layout_toLeftOf="@+id/tv_level"
+                android:isIndicator="true"
+                android:maxHeight="10dp"
+                android:minHeight="10dp"
+                android:numStars="4"
+                android:progressDrawable="@drawable/selector_rating_detail"
+                android:rating="2" />
+
+            <View
+                android:id="@+id/v_line_level"
+                android:layout_width="1px"
+                android:layout_height="16dp"
+                android:layout_alignTop="@+id/iv_avatar"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="9dp"
+                android:layout_toLeftOf="@+id/tv_level"
+                android:background="@color/line" />
+
+            <TextView
+                android:id="@+id/tv_level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|right"
+                android:text="极力推荐"
+                android:textColor="@color/ff_text_black"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_rest_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/ff_line" />
+
+            <TextView
+                android:id="@+id/tv_rest_name"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="26dp"
+                android:layout_marginRight="26dp"
+                android:gravity="center"
+                android:text="商家"
+                android:textColor="@color/ff_text_black"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_below="@+id/linearLayout1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/ff_line" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:layout_below="@+id/ll_level_container"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_vertical">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tv_total_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:drawableLeft="@mipmap/dynamic_detail_sum_price"
+                    android:drawablePadding="5dp"
+                    android:text="总价"
+                    android:textColor="#333333"
+                    android:textSize="11sp" />
+
+            </FrameLayout>
+
+            <View
+                android:id="@+id/v_line_price"
+                android:layout_width="1px"
+                android:layout_height="16dp"
+                android:background="@color/line" />
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+
+                <TextView
+                    android:id="@+id/tv_poeple_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:drawableLeft="@mipmap/dynamic_detail_people"
+                    android:drawablePadding="5dp"
+                    android:text="人数"
+                    android:textColor="#333333"
+                    android:textSize="11sp" />
+
+            </FrameLayout>
+            <View
+                android:layout_width="1px"
+                android:layout_height="16dp"
+                android:background="@color/line" />
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tv_people_average"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:drawableLeft="@mipmap/standard_icon_average"
+                    android:drawablePadding="5dp"
+                    android:text="人均"
+                    android:textColor="#333333"
+                    android:textSize="11sp" />
+
+            </FrameLayout>
+
+            <View
+                android:id="@+id/v_line_class"
+                android:layout_width="1px"
+                android:layout_height="16dp"
+                android:background="@color/line" />
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tv_class"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:drawableLeft="@mipmap/dynamic_detail_class"
+                    android:drawablePadding="5dp"
+                    android:text="分类"
+                    android:textColor="#333333"
+                    android:textSize="11sp" />
+
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

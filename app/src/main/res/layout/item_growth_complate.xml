@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv_point"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/line_upper"
+        android:layout_marginBottom="2dp"
+        android:layout_marginTop="2dp"
+        android:src="@mipmap/growth_complate_point" />
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="7dp"
+        android:layout_marginLeft="3dp"
+        android:layout_toEndOf="@+id/iv_point"
+        android:layout_toRightOf="@+id/iv_point"
+        android:background="@drawable/growth_compalte_bg_red"
+        android:drawableLeft="@mipmap/growth_complate_ic_record"
+        android:drawablePadding="7dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="2dp"
+        android:paddingRight="10dp"
+        android:textSize="12sp"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:text="TextView"
+        android:textColor="#fff" />
+
+    <ImageView
+        android:id="@+id/line_upper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/tv_content"
+        android:layout_toStartOf="@+id/tv_content"
+        android:src="@mipmap/lower_complate_line" />
+
+    <ImageView
+        android:id="@+id/line_lower"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/iv_point"
+        android:layout_toLeftOf="@+id/tv_content"
+        android:layout_toStartOf="@+id/tv_content"
+        android:src="@mipmap/upper_complate_line" />
+</RelativeLayout>

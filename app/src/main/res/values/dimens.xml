@@ -1,0 +1,76 @@
+<resources>
+    <dimen name="padding_tiny">5dp</dimen>
+    <dimen name="padding_small">10dp</dimen>
+    <dimen name="padding_middle">15dp</dimen>
+    <dimen name="padding_big">20dp</dimen>
+
+    <dimen name="font_size_1">9dp</dimen>
+    <dimen name="font_size_1_1">10dp</dimen>
+    <dimen name="font_size_2">11dp</dimen>
+    <dimen name="font_size_2_1">12dp</dimen>
+    <dimen name="font_size_3">12.5dp</dimen>
+    <dimen name="font_size_3_1">13dp</dimen>
+    <dimen name="font_size_3_2">14dp</dimen>
+    <dimen name="font_size_4">14.5dp</dimen>
+    <dimen name="font_size_4_1">15dp</dimen>
+    <dimen name="font_size_4_2">16dp</dimen>
+    <dimen name="font_size_5">17dp</dimen>
+    <dimen name="font_size_5_1">18dp</dimen>
+    <dimen name="font_size_6">19dp</dimen>
+    <dimen name="font_size_6_1">20dp</dimen>
+    <dimen name="font_size_7">21dp</dimen>
+    <dimen name="font_size_8">22dp</dimen>
+    <dimen name="font_size_9">23dp</dimen>
+    <dimen name="font_size_10">24dp</dimen>
+    <dimen name="activity_horizontal_margin">0dp</dimen>
+    <dimen name="activity_vertical_margin">0dp</dimen>
+
+    <!--字体大小-->
+    <!--标题字大小-->
+    <dimen name="title_text_size">18dp</dimen>
+    <dimen name="code_text_size">33dp</dimen>
+    <dimen name="com_sina_weibo_sdk_loginview_text_size">16.0sp</dimen>
+    <dimen name="com_sina_weibo_sdk_loginview_padding">12dip</dimen>
+    <dimen name="com_sina_weibo_sdk_loginview_padding_left">12dip</dimen>
+    <dimen name="com_sina_weibo_sdk_loginview_padding_right">16dp</dimen>
+    <dimen name="com_sina_weibo_sdk_loginview_padding_top">6dp</dimen>
+    <dimen name="com_sina_weibo_sdk_loginview_padding_bottom">6dp</dimen>
+    <dimen name="com_sina_weibo_sdk_loginview_compound_drawable_padding">12dp</dimen>
+    <dimen name="top5_radius">10dp</dimen>
+
+
+    <!--other-->
+    <!--标题宽-->
+    <dimen name="title_width">48dp</dimen>
+
+    <dimen name="emoji_panel_btn_size">43dp</dimen>
+    <dimen name="china_style_line_space">4dp</dimen>
+    <dimen name="china2_style_line_space">8dp</dimen>
+    <dimen name="brief2_style_cover_height">170dp</dimen>
+    <dimen name="padding_18">18dp</dimen>
+    <dimen name="brief2_2_style_cover_height">230dp</dimen>
+    <dimen name="vertical_textview_width">12dp</dimen>
+    <dimen name="vertical_textview_height">80dp</dimen>
+    <dimen name="vertical_textview_foodname_width">12dp</dimen>
+    <dimen name="brief_viewpage_default_height">340dp</dimen>
+    <dimen name="detail_cover_height">212dp</dimen>
+    <dimen name="vertical_china2_textview_foodname_width">12dp</dimen>
+    <dimen name="china2_Image_size">225dp</dimen>
+    <dimen name="detail_modern_cover_height">262dp</dimen>
+    <dimen name="detail_modern_text_width">114dp</dimen>
+    <dimen name="detail_modern_top_type_image_margin">132dp</dimen>
+    <dimen name="detail_china_2_left_margin">75dp</dimen>
+    <dimen name="comment_input_height">48dp</dimen>
+    <dimen name="profile_bg_height">175dp</dimen>
+    <dimen name="user_tab_height">45dp</dimen>
+    <dimen name="user_tab_filter_item_height">36dp</dimen>
+    <dimen name="user_tab_line_width">66dp</dimen>
+    <dimen name="choose_item_height">45dip</dimen>
+    <dimen name="filter_btn_height">30dip</dimen>
+    <dimen name="filter_btn_width">70dip</dimen>
+    <dimen name="home_gird_width">8dip</dimen>
+    <dimen name="home_nearby_header_padding">8dip</dimen>
+    <dimen name="sku_shop_image_size">120dip</dimen>
+    <dimen name="dining_share_title2_height">43dp</dimen>
+
+</resources>

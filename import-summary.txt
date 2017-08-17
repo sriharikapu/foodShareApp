@@ -1,0 +1,54 @@
+ECLIPSE ANDROID PROJECT IMPORT SUMMARY
+======================================
+
+Ignored Files:
+--------------
+The following files were *not* copied into the new Gradle project; you
+should evaluate whether these are still needed in your project and if
+so manually move them:
+
+* .git
+* .gitignore
+* build.xml
+
+Moved Files:
+------------
+Android Gradle projects use a different directory structure than ADT
+Eclipse projects. Here's how the projects were restructured:
+
+* AndroidManifest.xml => androidsdkcore\src\main\AndroidManifest.xml
+* libs\android-support-v7-recyclerview.jar => androidsdkcore\libs\android-support-v7-recyclerview.jar
+* libs\arm64-v8a\libtusdk-image.so => androidsdkcore\src\main\jniLibs\arm64-v8a\libtusdk-image.so
+* libs\arm64-v8a\libtusdk-library.so => androidsdkcore\src\main\jniLibs\arm64-v8a\libtusdk-library.so
+* libs\armeabi-v7a\libtusdk-image.so => androidsdkcore\src\main\jniLibs\armeabi-v7a\libtusdk-image.so
+* libs\armeabi-v7a\libtusdk-library.so => androidsdkcore\src\main\jniLibs\armeabi-v7a\libtusdk-library.so
+* libs\armeabi\libtusdk-image.so => androidsdkcore\src\main\jniLibs\armeabi\libtusdk-image.so
+* libs\armeabi\libtusdk-library.so => androidsdkcore\src\main\jniLibs\armeabi\libtusdk-library.so
+* libs\mips64\libtusdk-image.so => androidsdkcore\src\main\jniLibs\mips64\libtusdk-image.so
+* libs\mips64\libtusdk-library.so => androidsdkcore\src\main\jniLibs\mips64\libtusdk-library.so
+* libs\mips\libtusdk-image.so => androidsdkcore\src\main\jniLibs\mips\libtusdk-image.so
+* libs\mips\libtusdk-library.so => androidsdkcore\src\main\jniLibs\mips\libtusdk-library.so
+* libs\universal-image-loader-1.9.4.jar => androidsdkcore\libs\universal-image-loader-1.9.4.jar
+* libs\x86\libtusdk-image.so => androidsdkcore\src\main\jniLibs\x86\libtusdk-image.so
+* libs\x86\libtusdk-library.so => androidsdkcore\src\main\jniLibs\x86\libtusdk-library.so
+* libs\x86_64\libtusdk-image.so => androidsdkcore\src\main\jniLibs\x86_64\libtusdk-image.so
+* libs\x86_64\libtusdk-library.so => androidsdkcore\src\main\jniLibs\x86_64\libtusdk-library.so
+* lint.xml => androidsdkcore\lint.xml
+* proguard-project.txt => androidsdkcore\proguard-project.txt
+* res\ => androidsdkcore\src\main\res
+* src\ => androidsdkcore\src\main\java\
+
+Next Steps:
+-----------
+You can now build the project. The Gradle project needs network
+connectivity to download dependencies.
+
+Bugs:
+-----
+If for some reason your project does not build, and you determine that
+it is due to a bug or limitation of the Eclipse to Gradle importer,
+please file a bug at http://b.android.com with category
+Component-Tools.
+
+(This import summary is for your information only, and can be deleted
+after import once you are satisfied with the results.)

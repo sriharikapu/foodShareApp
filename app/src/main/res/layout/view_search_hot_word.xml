@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/tv_custom_circle"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:background="#fee663"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="1"
+            android:text="新增新功能,小黄圈原创商圈"
+            android:textColor="@color/ff_text_black"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="10dp"
+            android:drawableRight="@mipmap/custom_arrow"
+            android:paddingRight="9dp"
+            android:text="快去看看"
+            android:textColor="@color/ff_text_black"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="33dp"
+        android:layout_marginTop="34dp"
+        android:orientation="horizontal"
+        android:paddingLeft="12.5dp"
+        android:paddingRight="12.5dp">
+
+        <ImageView
+            android:id="@+id/iv_area"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/discover_search_more_entrance_area" />
+
+        <ImageView
+            android:id="@+id/iv_class"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:src="@mipmap/discover_search_more_entrance_class" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="25dp"
+            android:layout_height="1px"
+            android:layout_marginRight="10dp"
+            android:background="#333333" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:includeFontPadding="false"
+            android:text="热门推荐"
+            android:textColor="@color/ff_text_black"
+            android:textSize="12sp" />
+
+        <View
+            android:layout_width="25dp"
+            android:layout_height="1px"
+            android:layout_marginLeft="10dp"
+            android:background="#333333" />
+
+    </LinearLayout>
+
+    <com.fengnian.smallyellowo.foodie.widgets.XCFlowLayout
+        android:id="@+id/fl_word_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="22.5dp"
+        android:layout_marginRight="22.5dp"
+        android:layout_marginTop="6dp" />
+</LinearLayout>

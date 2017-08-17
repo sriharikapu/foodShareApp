@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_actionBar"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:background="@color/ff_bg_actionbar"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <ImageView
+        android:id="@+id/iv_actionbar_backIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:background="@drawable/ff_selector_button_actionbar_background"
+        android:onClick="onBackPressed"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:scaleType="centerInside"
+        android:src="@mipmap/ff_ic_back_pressed" />
+
+    <ImageView
+        android:id="@+id/iv_actionbar_close"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_toRightOf="@+id/iv_actionbar_backIcon"
+        android:layout_alignParentTop="true"
+        android:onClick="close"
+        android:scaleType="centerInside"
+        android:src="@mipmap/ic_close_three_level_page_black" />
+    <TextView
+        android:id="@+id/tv_actionbar_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
+        android:singleLine="true"
+        android:text="@string/app_name"
+        android:textColor="@color/ff_text_actionbar"
+        android:textSize="@dimen/ff_text_size_title" />
+
+    <LinearLayout
+        android:id="@+id/ll_actionbar_menucontainer"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"></LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/pb_actionbar_loading"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="@dimen/ff_actionbarHight"
+        android:layout_height="@dimen/ff_actionbarHight"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/ll_actionbar_menucontainer"
+        android:padding="12dp"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/actionbar_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_alignParentBottom="true"
+        android:background="@color/line" />
+</RelativeLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImageButton xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/ff_actionbarHight"
+    android:layout_height="@dimen/ff_actionbarHight"
+    android:scaleType="centerInside"
+    android:padding="@dimen/ff_border"
+    android:background="@drawable/ff_selector_button_actionbar_background"
+    android:contentDescription="@string/app_name" />

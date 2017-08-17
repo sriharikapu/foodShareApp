@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/user_tab_filter_item_height"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_food_type"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:drawablePadding="@dimen/padding_tiny"
+        android:drawableRight="@mipmap/profile_filter_down_icon"
+        android:gravity="right|center_vertical"
+        android:minWidth="97dp"
+        android:paddingLeft="@dimen/padding_small"
+        android:paddingRight="@dimen/padding_small"
+        android:textColor="@color/color_3"
+        android:textSize="@dimen/font_size_3_1"
+        tools:text="品类" />
+
+    <TextView
+        android:id="@+id/tv_food_area"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:drawablePadding="@dimen/padding_tiny"
+        android:drawableRight="@mipmap/profile_filter_down_icon"
+        android:gravity="center"
+        android:paddingLeft="@dimen/padding_small"
+        android:paddingRight="@dimen/padding_small"
+        android:textColor="@color/color_3"
+        android:textSize="@dimen/font_size_3_1"
+        tools:text="区域" />
+
+    <TextView
+        android:id="@+id/tv_food_filter"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="40dp"
+        android:drawablePadding="@dimen/padding_tiny"
+        android:drawableRight="@mipmap/profile_filter_down_icon"
+        android:gravity="right|center_vertical"
+        android:paddingLeft="@dimen/padding_small"
+        android:paddingRight="@dimen/padding_small"
+        android:textColor="@color/color_3"
+        android:textSize="@dimen/font_size_3_1"
+        tools:text="筛选" />
+
+    <TextView
+        android:id="@+id/tv_reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@mipmap/profile_filter_reset_icon" />
+</RelativeLayout>

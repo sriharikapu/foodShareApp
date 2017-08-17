@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_bg"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/s_status_bar"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:background="@color/black_color" />
+
+    <RelativeLayout
+        android:id="@+id/title_1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ff_actionbarHight">
+
+        <ImageView
+            android:id="@+id/my_back_view"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/ff_actionbarHight"
+            android:paddingLeft="@dimen/padding_middle"
+            android:paddingRight="@dimen/padding_middle"
+            android:scaleType="centerInside"
+            android:src="@mipmap/ff_ic_back_pressed" />
+
+        <TextView
+            android:id="@+id/tv_actionbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="80dp"
+            android:singleLine="true"
+            android:text="@string/dining_list_title"
+            android:textColor="@color/ff_text_actionbar"
+            android:textSize="@dimen/font_size_5_1" />
+
+        <TextView
+            android:id="@+id/new_build"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="1dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/padding_middle"
+            android:paddingRight="@dimen/padding_middle"
+            android:text="新建"
+            android:textColor="@color/title_text_color"
+            android:textSize="@dimen/font_size_3_2" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/line" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/list_view"
+        style="@style/listViewTheme"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/line"
+        android:dividerHeight="1px" />
+</LinearLayout>

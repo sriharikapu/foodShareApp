@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+    <ProgressBar
+        android:id="@+id/find_jbzc_progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="5dip"
+        android:max="100" />
+    <com.tencent.smtt.sdk.WebView
+        android:id="@+id/wv_find_jbzc"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </com.tencent.smtt.sdk.WebView>
+</LinearLayout>

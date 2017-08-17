@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/normal_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_cover"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/detail_cover_height"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@color/image_bg"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:id="@+id/iv_add_crown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/iv_avator"
+            android:layout_alignTop="@+id/iv_avator"
+            android:layout_marginLeft="-3dp"
+            android:layout_marginTop="-3dp"
+            android:src="@mipmap/small_bg_is_add_crow"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/iv_avator"
+            android:layout_width="58dp"
+            android:layout_height="58dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="90dp"
+            android:background="@drawable/user_avatar_circle_with_alpha"
+            android:padding="1.5dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/user_avatar_circle_gray" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_avator"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="4dp"
+            android:shadowColor="@color/white_shadow_color"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="1"
+            android:text="名字"
+            android:textColor="@color/white_bg"
+            android:textSize="@dimen/font_size_3" />
+
+        <TextView
+            android:id="@+id/tv_attention"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/iv_avator"
+            android:layout_marginRight="16dp"
+            android:drawableLeft="@mipmap/ic_add_attention"
+            android:drawablePadding="4dp"
+            android:gravity="center"
+            android:textColor="@color/white_bg"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            tools:text="互相关注" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_is_jing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="-10dp"
+        android:src="@mipmap/dynamic_detail_jing" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/padding_middle"
+        android:layout_marginRight="@dimen/padding_middle"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:textColor="@color/china_style_font_color"
+        android:textSize="@dimen/font_size_6"
+        tools:text="有味道的地道美食之旅" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:gravity="center"
+        android:textColor="#aaaaaa"
+        android:textSize="@dimen/font_size_2_1"
+        tools:text="时间: 2016-8-9 15:20" />
+
+    <LinearLayout
+        android:id="@+id/ll_level_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="14dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RatingBar
+            android:id="@+id/rb_level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/iv_avatar"
+            android:layout_toLeftOf="@+id/tv_level"
+            android:isIndicator="true"
+            android:minHeight="12dp"
+            android:numStars="4"
+            android:progressDrawable="@drawable/selector_rating_detail_china"
+            android:rating="2" />
+
+        <View
+            android:id="@+id/v_line_level"
+            android:layout_width="0.5dp"
+            android:layout_height="16dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="9dp"
+            android:layout_toLeftOf="@+id/tv_level"
+            android:background="@color/china_style_font_color" />
+
+        <TextView
+            android:id="@+id/tv_level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textColor="@color/china_style_font_color"
+            android:textSize="@dimen/font_size_2"
+            tools:text="极力推荐" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/detail_eat_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/padding_big"
+        android:layout_marginTop="@dimen/padding_middle"
+        android:src="@drawable/china2_eat_detail_food_bg" />
+
+    <RelativeLayout
+        android:id="@+id/eat_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/base_line"
+            android:layout_width="185dp"
+            android:layout_height="1px"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/tv_class_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/tv_class"
+            android:layout_marginRight="@dimen/padding_big"
+            android:layout_toLeftOf="@+id/tv_class"
+            android:background="@drawable/detail_eat_info_bg"
+            android:text="餐类"
+            android:textColor="@color/china_style_font_color"
+            android:textSize="@dimen/font_size_2" />
+
+        <TextView
+            android:id="@+id/tv_class"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/base_line"
+            android:layout_alignRight="@+id/base_line"
+            android:layout_marginBottom="@dimen/china2_style_line_space"
+            android:maxLength="10"
+            android:paddingTop="1dp"
+            android:textColor="@color/china_style_font_color"
+            android:textSize="@dimen/font_size_2"
+            tools:text="下午茶" />
+
+        <TextView
+            android:id="@+id/tv_total_price_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/tv_total_price"
+            android:layout_marginRight="@dimen/padding_big"
+            android:layout_toLeftOf="@+id/tv_total_price"
+            android:background="@drawable/detail_eat_info_bg"
+            android:text="总价"
+            android:textColor="@color/china_style_font_color"
+            android:textSize="@dimen/font_size_2" />
+
+        <TextView
+            android:id="@+id/tv_total_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/base_line"
+            android:layout_alignRight="@+id/base_line"
+            android:layout_below="@+id/tv_class"
+            android:layout_marginBottom="@dimen/china2_style_line_space"
+            android:maxLength="10"
+            android:paddingTop="1dp"
+            android:textColor="@color/china_style_font_color"
+            android:textSize="@dimen/font_size_2"
+            tools:text="¥1000" />
+
+        <TextView
+            android:id="@+id/tv_poeple_num_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/tv_poeple_num"
+            android:layout_marginRight="@dimen/padding_big"
+            android:layout_toLeftOf="@+id/tv_poeple_num"
+            android:background="@drawable/detail_eat_info_bg"
+            android:text="人数"
+            android:textColor="@color/china_style_font_color"
+            android:textSize="@dimen/font_size_2" />
+
+        <TextView
+            android:id="@+id/tv_poeple_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/base_line"
+            android:layout_alignParentRight="true"
+            android:layout_alignRight="@+id/base_line"
+            android:layout_below="@+id/tv_total_price"
+            android:layout_marginBottom="@dimen/china2_style_line_space"
+            android:maxLength="10"
+            android:minWidth="40dp"
+            android:paddingTop="1dp"
+            android:textColor="@color/china_style_font_color"
+            android:textSize="@dimen/font_size_2"
+            tools:text="10人" />
+
+        <TextView
+            android:id="@+id/tv_people_average_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/tv_people_average"
+            android:layout_marginRight="@dimen/padding_big"
+            android:layout_toLeftOf="@+id/tv_people_average"
+            android:background="@drawable/detail_eat_info_bg"
+            android:text="人均"
+            android:textColor="@color/china_style_font_color"
+            android:textSize="@dimen/font_size_2" />
+
+        <TextView
+            android:id="@+id/tv_people_average"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/base_line"
+            android:layout_alignParentRight="true"
+            android:layout_alignRight="@+id/base_line"
+            android:layout_below="@+id/tv_poeple_num"
+            android:layout_marginBottom="@dimen/china2_style_line_space"
+            android:maxLength="10"
+            android:minWidth="40dp"
+            android:paddingTop="1dp"
+            android:textColor="@color/china_style_font_color"
+            android:textSize="@dimen/font_size_2"
+            tools:text="¥100" />
+
+        <TextView
+            android:id="@+id/tv_rest_name_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/tv_rest_name"
+            android:layout_marginRight="@dimen/padding_big"
+            android:layout_toLeftOf="@+id/tv_rest_name"
+            android:background="@drawable/detail_eat_info_bg"
+            android:text="商户名称"
+            android:textColor="@color/china_style_font_color"
+            android:textSize="@dimen/font_size_2" />
+
+        <TextView
+            android:id="@+id/tv_rest_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/base_line"
+            android:layout_below="@+id/tv_people_average"
+            android:layout_marginRight="@dimen/padding_small"
+            android:drawablePadding="@dimen/padding_small"
+            android:drawableRight="@drawable/china_style_2_arrow"
+            android:lineSpacingMultiplier="1.2"
+            android:paddingTop="1dp"
+            android:textColor="@color/china_style_font_color"
+            android:textSize="@dimen/font_size_2"
+            tools:text="北京好吃的烤鸭食品专营" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/line_1"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/gray_bg" />
+
+    <ImageView
+        android:id="@+id/menu_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="12dp"
+        android:layout_marginTop="17dp"
+        android:src="@drawable/china2_eat_detail_menu_bg" />
+
+    <TextView
+        android:id="@+id/tv_foods"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/padding_middle"
+        android:layout_marginRight="@dimen/padding_middle"
+        android:gravity="center"
+        android:lineSpacingExtra="4dp"
+        android:textColor="@color/china_style_font_color"
+        android:textSize="@dimen/font_size_2_1"
+        tools:text="平江外婆菜、湘西好吃的鱼、平江外婆菜、湘西好吃的鱼" />
+
+    <View
+        android:id="@+id/line_2"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="@dimen/padding_big"
+        android:background="@color/gray_bg" />
+</LinearLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white_bg"
+    android:paddingBottom="@dimen/padding_middle"
+    android:paddingLeft="23dp"
+    android:paddingRight="23dp"
+    android:paddingTop="@dimen/padding_middle">
+
+    <TextView
+        android:id="@+id/tv_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="目的地"
+        android:textColor="@color/title_text_color"
+        android:textSize="@dimen/font_size_3_1" />
+
+
+    <TextView
+        android:id="@+id/tv_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_1"
+        android:layout_marginTop="4dp"
+        android:ellipsize="end"
+        android:maxWidth="230dp"
+        android:minWidth="100dp"
+        android:singleLine="true"
+        android:text="@string/location_ing"
+        android:textColor="@color/title_text_color"
+        android:textSize="@dimen/font_size_3_2" />
+
+    <ImageView
+        android:id="@+id/my_back_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="20dp"
+       android:layout_toLeftOf="@+id/current_location"
+        android:scaleType="centerInside"
+        android:src="@mipmap/dining_nearby_right_arrow" />
+
+    <TextView
+        android:id="@+id/current_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:drawablePadding="3dp"
+        android:drawableTop="@mipmap/dining_nearby_location_icon"
+        android:text="当前位置"
+        android:textColor="@color/title_text_color"
+        android:textSize="@dimen/font_size_2_1" />
+
+</RelativeLayout>

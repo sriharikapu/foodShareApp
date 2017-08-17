@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/brief2_style_bg"
+    android:orientation="vertical"
+    android:paddingTop="30dp">
+
+    <RelativeLayout
+        android:id="@+id/layout_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/padding_middle">
+
+        <ImageView
+            android:id="@+id/iv_comment_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="30dp"
+            android:src="@drawable/brief_ei_ic_good" />
+
+
+        <View
+            android:id="@+id/line_1"
+            android:layout_width="0.5dp"
+            android:layout_height="200dp"
+            android:layout_marginLeft="@dimen/padding_small"
+            android:layout_marginRight="@dimen/padding_small"
+            android:layout_toRightOf="@+id/iv_comment_1"
+            android:background="@color/brief2_style_line_color" />
+
+        <com.fengnian.smallyellowo.foodie.widgets.VerticalTextView
+            android:id="@+id/tv_dish_name_1"
+            android:layout_width="@dimen/vertical_textview_foodname_width"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/iv_img_1"
+            android:layout_alignTop="@+id/iv_img_1"
+            android:layout_marginLeft="-4dp"
+            android:layout_marginRight="@dimen/padding_big"
+            android:layout_toRightOf="@+id/line_1"
+            android:gravity="center"
+            android:textColor="@color/title_text_color"
+            android:textSize="@dimen/font_size_4"
+            tools:text="菜品名称菜品名称菜品名称菜品名称菜品名称" />
+
+
+        <ImageView
+            android:id="@+id/iv_img_bg_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/iv_img_1"
+            android:layout_alignLeft="@+id/iv_img_1"
+            android:layout_alignRight="@+id/iv_img_1"
+            android:layout_alignTop="@+id/iv_img_1"
+            android:layout_marginBottom="-7dp"
+            android:layout_marginLeft="-7dp"
+            android:layout_marginRight="7dp"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/brief2_style_edging" />
+
+        <com.fengnian.smallyellowo.foodie.widgets.CircleImageView
+            android:id="@+id/iv_img_1"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@+id/tv_dish_name_1"
+            android:background="@color/image_bg"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/tv_content_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/iv_img_1"
+            android:layout_alignRight="@+id/iv_img_1"
+            android:layout_below="@+id/iv_img_1"
+            android:layout_marginTop="10dp"
+            android:lineSpacingExtra="4dp"
+            android:textColor="@color/color_1"
+            android:textSize="@dimen/font_size_2"
+            tools:text="外婆菜是一个传说外婆菜是一个传说外婆菜是一个传说" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/padding_middle">
+
+        <ImageView
+            android:id="@+id/iv_comment_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="30dp"
+            android:src="@drawable/brief_ei_ic_good" />
+
+        <View
+            android:id="@+id/line_2"
+            android:layout_width="0.5dp"
+            android:layout_height="200dp"
+            android:layout_marginLeft="@dimen/padding_small"
+            android:layout_marginRight="@dimen/padding_small"
+            android:layout_toLeftOf="@+id/iv_comment_2"
+            android:background="@color/brief2_style_line_color" />
+
+        <com.fengnian.smallyellowo.foodie.widgets.VerticalTextView
+            android:id="@+id/tv_dish_name_2"
+            android:layout_width="@dimen/vertical_textview_foodname_width"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/iv_img_2"
+            android:layout_alignTop="@+id/iv_img_2"
+            android:layout_marginLeft="@dimen/padding_big"
+            android:layout_marginRight="-4dp"
+            android:layout_toLeftOf="@+id/line_2"
+            android:gravity="center"
+            android:textColor="@color/title_text_color"
+            android:textSize="@dimen/font_size_4"
+            tools:text="菜品名称菜品名称菜品名称菜品名称菜品名称" />
+
+        <ImageView
+            android:id="@+id/iv_img_bg_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/iv_img_2"
+            android:layout_alignLeft="@+id/iv_img_2"
+            android:layout_alignRight="@+id/iv_img_2"
+            android:layout_alignTop="@+id/iv_img_2"
+            android:layout_marginBottom="-7dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="-7dp"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/brief2_style_edging" />
+
+        <com.fengnian.smallyellowo.foodie.widgets.CircleImageView
+            android:id="@+id/iv_img_2"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/tv_dish_name_2"
+            android:background="@color/image_bg"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/tv_content_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/iv_img_2"
+            android:layout_alignRight="@+id/iv_img_2"
+            android:layout_below="@+id/iv_img_2"
+            android:layout_marginTop="10dp"
+            android:lineSpacingExtra="4dp"
+            android:textColor="@color/color_1"
+            android:textSize="@dimen/font_size_2"
+            tools:text="外婆菜是一个传说外婆菜是一个传说外婆菜是一个传说" />
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/item_foot"
+        layout="@layout/item_dynamic_detail_foot_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

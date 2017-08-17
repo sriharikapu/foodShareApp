@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_bg">
+
+    <ListView
+        android:id="@+id/list_view"
+        style="@style/listViewTheme"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/view_bottom"
+        android:layout_alignParentTop="true"
+        android:divider="@color/transparent"
+        android:dividerHeight="0dp" />
+
+    <View
+        android:id="@+id/line_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_alignTop="@+id/view_bottom"
+        android:background="@color/line" />
+
+    <LinearLayout
+        android:id="@+id/view_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/dining_share_to_weixin"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/dining_share_to_weixin_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:drawableLeft="@drawable/dining_share_to_weixin"
+                android:drawablePadding="4dp"
+                android:gravity="center"
+                android:text="@string/dining_recommend_share_1"
+                android:textColor="@color/title_text_color"
+                android:textSize="@dimen/font_size_3_2" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="7dp"
+            android:layout_marginTop="7dp"
+            android:background="@color/line" />
+
+        <RelativeLayout
+            android:id="@+id/dining_share_to_want_eat"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/dining_share_to_want_eat_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:drawableLeft="@drawable/dining_share_to_want_eat"
+                android:drawablePadding="4dp"
+                android:gravity="center"
+                android:text="@string/dining_recommend_share_2"
+                android:textColor="@color/title_text_color"
+                android:textSize="@dimen/font_size_3_2" />
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

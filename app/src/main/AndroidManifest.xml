@@ -1,0 +1,758 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.fengnian.smallyellowo.foodie">
+
+    <uses-sdk android:minSdkVersion="15" />
+
+    <!-- 读联系人权限 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <!-- 写联系人权限 -->
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <!-- 拨号权限 -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <!-- 读短信权限 -->
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.android.permission.READ_LOGS" />
+
+    <!-- Normal Permissions 不需要运行时注册 -->
+    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+
+    <!-- 请求网络 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- 不是SDK需要的权限，是示例中的后台唤醒定位需要的权限 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- 需要运行时注册的权限 -->
+    <!-- 用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <!-- 写入扩展存储，向扩展卡写入数据，用于写入缓存定位数据 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 读取缓存数据 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <!-- 更改设置 -->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.REORDER_TASKS" />
+
+    <!-- Optional for location -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <!-- iBeancon功能所需权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <!-- 个推3.0电子围栏功能所需权限 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:name=".appbase.APP"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:persistent="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:hardwareAccelerated">
+
+        <!-- 友盟统计 -->
+        <!--
+        正式的key: 582d69a3a40fa375ba00019b
+        测试key：582d69a3a40fa375ba00019b
+        -->
+
+
+        <!-- umeng -->
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="${UMENG_CHANNEL_VALUE}" />
+        <meta-data
+            android:name="CHANNEL"
+            android:value="1" />
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="582d69a3a40fa375ba00019b" />
+        <meta-data
+            android:name="UMENG_MESSAGE_SECRET"
+            android:value="353b829355657b0a27ec2cdcbf9338d5" />
+
+        <!-- getui -->
+        <receiver
+            android:name=".receivers.GeTuiReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.igexin.sdk.action.EtvOACOJjq9VGI4rx1Ktd1" />
+            </intent-filter>
+        </receiver>
+        <!-- 百度统计 -->
+        <receiver android:name="com.baidu.soleagencysdk.downloadapk.CompleteReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.DOWNLOAD_COMPLETE" />
+                <action android:name="android.intent.action.DOWNLOAD_NOTIFICATION_CLICKED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <!-- <provider -->
+        <!-- android:name="com.umeng.message.provider.MessageProvider" -->
+        <!-- android:authorities="com.fengnian.smallyellowo.foodie.umeng.message" -->
+        <!-- android:exported="false"> -->
+        <!-- <grant-uri-permission android:pathPattern=".*" /> -->
+        <!-- </provider> -->
+
+
+        <!-- 配置接入的appkey信息 -->
+        <meta-data
+            android:name="BDAPPID"
+            android:value="9258985" />
+        <meta-data
+            android:name="BDAPPKEY"
+            android:value="x7wOynzMUUOGMvDU91UuX4p0LCfY3uMF" />
+        <meta-data
+            android:name="WEIBO_APPKEY"
+            android:value="3451219723" />
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+
+        <!-- User defined.  For test only  用户自定义的广播接收器 -->
+
+        <meta-data
+            android:name="channle"
+            android:value="none" />
+
+        <!-- 设置key -->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="a1147c5b63aa7d61a4a42488ed2d0c5a" />
+        <!-- 定位需要的服务 -->
+        <service android:name="com.amap.api.location.APSService" />
+
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="rEQ8rDC82xXpzYPqWr8lFxLmRwkmqfh4" />
+
+        <!-- 其他 -->
+        <!-- <activity android:name=".WBCallActivityV3" /> -->
+        <!-- <activity android:name=".WBUserStateActivity" /> -->
+
+        作者：麦建波
+        链接：https://www.zhihu.com/question/29719766/answer/90553495
+        来源：知乎
+        著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+
+        <!-- 必须注册在微博授权，分享微博时候用到 -->
+        <activity
+            android:name="com.sina.weibo.sdk.component.WeiboSdkBrowser"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- 手机短信注册页面 -->
+        <activity
+            android:name="com.sina.weibo.sdk.register.mobile.MobileRegisterActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- 注册选择国家页面 -->
+        <activity
+            android:name="com.sina.weibo.sdk.register.mobile.SelectCountryActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".GuidePageActivity"
+            android:configChanges="fontScale"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/FirstActivityTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ApplicationBackActivity"
+            android:configChanges="fontScale"
+            android:label="欢迎回到小黄圈"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="smallyellowo" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".login.RegisterActvity"
+            android:configChanges="fontScale"
+            android:label="欢迎加入小黄圈"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RestLocationActivity"
+            android:configChanges="fontScale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".login.SetNicknameActivty"
+            android:configChanges="fontScale"
+            android:label="欢迎加入小黄圈"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".login.FoundPassWordActivty"
+            android:configChanges="fontScale"
+            android:label="忘记密码"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".login.ResetPassWordActivty"
+            android:configChanges="fontScale"
+            android:label="重置密码"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".login.LoginActivity"
+            android:configChanges="fontScale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".bigpicture.ChatBigPictureActivity"
+            android:configChanges="fontScale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="fontScale"
+            android:screenOrientation="portrait"
+            android:theme="@style/ImageTranslucentTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".feeddetail.DynamicDetailActivity"
+            android:configChanges="fontScale"
+            android:screenOrientation="portrait"
+            android:theme="@style/ImageTranslucentTheme" />
+        <activity
+            android:name=".PGCDetailActivity"
+            android:configChanges="fontScale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UserInfoActivity"
+            android:configChanges="fontScale"
+            android:screenOrientation="portrait"
+            android:theme="@style/ImageTranslucentTheme" />
+        <!--<activity
+            android:name=".WantEatListActivity"
+            android:configChanges="fontScale"
+            android:screenOrientation="portrait" />-->
+        <activity
+            android:name=".RestInfoActivity"
+            android:configChanges="fontScale"
+            android:screenOrientation="portrait"
+            android:theme="@style/ImageTranslucentTheme" />
+        <activity
+            android:name=".MoreClassAreaActivity"
+            android:configChanges="fontScale"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".UserDynamicActivity"
+            android:configChanges="fontScale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RestSearchResultActivity"
+            android:configChanges="fontScale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.fan.framework.select_picture.AllFolderImagesActivity"
+            android:configChanges="fontScale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PGCActivity"
+            android:configChanges="fontScale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SearchRestActivity"
+            android:configChanges="fontScale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".contact.MyFansActivty"
+            android:configChanges="fontScale"
+            android:label="我的粉丝"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".personal.MyAllAttionActivity"
+            android:configChanges="fontScale"
+            android:label="全部关注"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".personal.FansActivty"
+            android:configChanges="fontScale"
+            android:label="粉丝"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".personal.InviteFriendActivity"
+            android:configChanges="fontScale"
+            android:label="邀请好友"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".contact.AddFriendsActivty"
+            android:configChanges="fontScale"
+            android:label="添加好友"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".contact.ContactActivty"
+            android:configChanges="fontScale"
+            android:label="通讯录"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".contact.RelationSearchActivity"
+            android:configChanges="fontScale"
+            android:label="搜索"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".personal.SettingActivity"
+            android:configChanges="fontScale"
+            android:label="设置"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".personal.VersionUpdateActivity"
+            android:configChanges="fontScale"
+            android:label="关于小黄圈"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".personal.PersonalActivty"
+            android:configChanges="fontScale"
+            android:label="个人信息"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".personal.NicknameActivty"
+            android:configChanges="fontScale"
+            android:label="昵称"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".personal.UpdatePersonalDeclarationActivty"
+            android:configChanges="fontScale"
+            android:label="个人宣言"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="fontScale"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".wxapi.SinaEntryActivity"
+            android:configChanges="fontScale"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".CommentActivity"
+            android:configChanges="fontScale"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".personal.FoodListDetailActivty"
+            android:configChanges="fontScale"
+            android:screenOrientation="portrait" />
+        <!-- h5进入的 -->
+        <activity
+            android:name=".CommonWebviewUtilActivity"
+            android:configChanges="fontScale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NoticeActivity"
+            android:configChanges="fontScale"
+            android:label="@string/title_activity_notice"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NoticeDetailActivity"
+            android:configChanges="fontScale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AddRestActivity"
+            android:configChanges="fontScale"
+            android:label="添加想吃"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CheckBigimgActivty"
+            android:configChanges="fontScale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RichTextEditActivity"
+            android:configChanges="fontScale"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ReleaseMainActivty"
+            android:configChanges="fontScale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".feeddetail.FastDetailActivity"
+            android:configChanges="fontScale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".release.GalleryAndPhotoActvity"
+            android:configChanges="fontScale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".release.PicPhotoActvity"
+            android:configChanges="fontScale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".release.ScrollPhotoActvity"
+            android:configChanges="fontScale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MemoReultActivty"
+            android:configChanges="fontScale"
+            android:label="水单结果"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".AddFoodNameActivty"
+            android:configChanges="fontScale"
+            android:label="添加菜品"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PublishedSuccessActivity"
+            android:configChanges="fontScale"
+            android:label="分享"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CheckScoreActivity"
+            android:configChanges="fontScale"
+            android:screenOrientation="portrait"
+            android:theme="@style/Transparent" />
+        <activity
+            android:name=".WelcomActivity"
+            android:configChanges="fontScale"
+            android:screenOrientation="portrait"
+            android:theme="@style/FirstActivityTheme"/>
+        <activity
+            android:name=".CacheManagerActivity"
+            android:configChanges="fontScale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SuggestActivity"
+            android:configChanges="fontScale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".DynamicMessagesActivity"
+            android:configChanges="fontScale"
+            android:label="消息"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".WantEatDetailActivity"
+            android:configChanges="fontScale"
+            android:label="详情"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".GoodFriendsWantEatActivity"
+            android:configChanges="fontScale"
+            android:screenOrientation="portrait"
+            android:theme="@style/Transparent" />
+        <activity android:name=".SortActivity" />
+        <activity
+            android:name=".personal.TongYongActivity"
+            android:configChanges="fontScale"
+            android:label="通用"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RechTextEditSetCoverActivity"
+            android:configChanges="fontScale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RichTextEditImageActivity"
+            android:configChanges="fontScale"
+            android:screenOrientation="portrait"
+            android:theme="@style/ImageTranslucentTheme" />
+        <activity
+            android:name=".CoverActivity"
+            android:configChanges="fontScale"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.fan.framework.select_picture.CutImageActivity"
+            android:configChanges="fontScale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".FastEditActivity"
+            android:configChanges="fontScale"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".personal.PushMessageActivity"
+            android:configChanges="fontScale"
+            android:label="消息推送"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".contact.RecommendActivity"
+            android:configChanges="fontScale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".DeliciousFoodMapActivity"
+            android:configChanges="fontScale"
+            android:label="美食地图"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ReviewImagesActivity"
+            android:configChanges="fontScale"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".NewsActivity" />
+        <activity
+            android:name="org.lasque.tusdk.impl.activity.TuFragmentActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".contact.MySelfErWeiMaActivity"
+            android:configChanges="fontScale"
+            android:label="我的二维码"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".zxing.CaptureActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".ClubUserInfoActivity"
+            android:configChanges="fontScale"
+            android:screenOrientation="portrait" />
+        <activity android:name=".SelectModelActivity" />
+        <activity android:name=".SelectModelSingleActivity" />
+        <activity
+            android:name=".GongJunzhiActivity"
+            android:configChanges="fontScale"
+            android:screenOrientation="portrait"
+            android:theme="@style/Transparent" />
+        <!--<activity
+            android:name=".ClubPaiHangActivity"
+            android:configChanges="fontScale"
+            android:label="功勋值排行"
+            android:screenOrientation="portrait" />-->
+        <activity
+            android:name=".TestActivity"
+            android:configChanges="fontScale"
+            android:label="功勋值排行"
+            android:screenOrientation="portrait" />
+        <activity android:name=".Adapter.AddyuluActivity" />
+        <activity
+            android:name=".contact.MyAttionFragmentActivty"
+            android:configChanges="fontScale"
+            android:label="我的关注"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".personal.BangDingTelActivty"
+            android:configChanges="fontScale"
+            android:label="绑定手机号码"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".personal.BangDingTelNextActivty"
+            android:configChanges="fontScale"
+            android:label="绑定手机号码"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".personal.ProfileSearchSuggestAct"
+            android:configChanges="fontScale"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible" />
+        <activity
+            android:name=".personal.ProfileSearchResultAct"
+            android:configChanges="fontScale"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible|adjustPan" />
+        <activity
+            android:name=".GrowthHistoryActivity"
+            android:theme="@style/ImageTranslucentTheme" />
+        <activity
+            android:name=".login.LoginOneActivity"
+            android:configChanges="fontScale"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysVisible" />
+        <activity
+            android:name=".login.VerificationCodeLoginActivity"
+            android:configChanges="fontScale"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysVisible" />
+        <activity
+            android:name=".login.SetLoginPasOneActivty"
+            android:configChanges="fontScale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".login.SetNicknameOneActivty"
+            android:configChanges="fontScale"
+            android:screenOrientation="portrait" />
+        <activity android:name=".Main2Activity" />
+        <activity
+            android:name=".shopcommiterror.ShopErrorTypeActivity"
+            android:configChanges="fontScale"
+            android:label="商户报错类型"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".shopcommiterror.ShopBusinessQuestionActivty"
+            android:configChanges="fontScale"
+            android:label="商户营业问题"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".shopcommiterror.ShopBanQianAdressActivtyi"
+            android:configChanges="fontScale"
+            android:label="商户搬迁新址"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".shopcommiterror.ChangeAdressToMapActivity"
+            android:configChanges="fontScale"
+            android:label="地图选点"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".shopcommiterror.ShopInfoErrorActivity"
+            android:configChanges="fontScale"
+            android:label="商户报错"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".scoreshop.ScoreShopActivity"
+            android:configChanges="fontScale"
+            android:label="积分商城"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".scoreshop.ScoreDetailActivity"
+            android:configChanges="fontScale"
+            android:label="积分页"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".scoreshop.SkuDetailActivity"
+            android:configChanges="fontScale"
+            android:label="商品详情"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".personal.AddressEditActivity"
+            android:configChanges="fontScale"
+            android:label="收货地址"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible" />
+        <activity
+            android:name=".ClubActivity"
+            android:configChanges="fontScale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".EatWordActivity"
+            android:configChanges="fontScale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".BwtdActivity"
+            android:configChanges="fontScale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SwitchMubanActivity"
+            android:configChanges="fontScale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".usercenter.BindAccountActivity"
+            android:configChanges="fontScale"
+            android:label="第三方账号绑定"
+            android:screenOrientation="portrait" />
+
+        <!-- qq登录 -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent1105925460" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="behind"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".diningcase.WorkDiningActivity"
+            android:configChanges="fontScale"
+            android:screenOrientation="portrait"
+            android:theme="@style/ImageTranslucentTheme" />
+        <activity
+            android:name=".diningcase.TogetherDiningActivity"
+            android:configChanges="fontScale"
+            android:screenOrientation="portrait"
+            android:theme="@style/ImageTranslucentTheme" />
+        <activity
+            android:name=".diningcase.MyselfDiningActivity"
+            android:configChanges="fontScale"
+            android:screenOrientation="portrait"
+            android:theme="@style/ImageTranslucentTheme" />
+        <activity
+            android:name=".diningcase.DiningRecommendActivity"
+            android:configChanges="fontScale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".diningcase.NearbyGdDiningRoomActivity"
+            android:configChanges="fontScale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SingleCheckImageActivity"
+            android:configChanges="fontScale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".diningcase.NearbyRestListActivity"
+            android:configChanges="fontScale"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SelectCityActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".CustomCircleActivity"/>
+
+        <activity
+            android:name=".usercenter.BindPhoneActivity"
+            android:configChanges="fontScale"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysVisible" />
+
+        <activity
+            android:name=".usercenter.VerificationCodeBindActivity"
+            android:screenOrientation="portrait" />
+
+    </application>
+
+</manifest>

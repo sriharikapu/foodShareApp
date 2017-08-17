@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.fengnian.smallyellowo.foodie.widgets.SlidingButtonView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_ugc_edit_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="6dp"
+        android:paddingTop="6dp">
+
+        <RelativeLayout
+            android:id="@+id/rl_content"
+            android:layout_width="200dp"
+            android:layout_height="140dp"
+            android:layout_marginLeft="9dp"
+            android:layout_marginRight="9dp"
+            android:background="@drawable/shape_edit_ugc_item_bg">
+
+
+            <com.fengnian.smallyellowo.foodie.widgets.CircleImageView
+                android:id="@+id/iv_img"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/linearLayout4"
+                android:background="@color/image_bg"
+                android:scaleType="centerCrop" />
+
+            <RelativeLayout
+                android:id="@+id/rl_img"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/linearLayout4"
+                android:background="@drawable/ugc_item_edit_alpha">
+
+                <TextView
+                    android:id="@+id/tv_process_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_toLeftOf="@+id/line_img_action"
+                    android:gravity="center_vertical|right"
+                    android:paddingRight="30dp"
+                    android:text="美化图片"
+                    android:textColor="#5c5c5c"
+                    android:textSize="15dp" />
+
+                <View
+                    android:id="@+id/line_img_action"
+                    android:layout_width="1px"
+                    android:layout_height="16dp"
+                    android:layout_centerInParent="true"
+                    android:background="@color/ff_text_gray" />
+
+                <TextView
+                    android:id="@+id/tv_reselect_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_toRightOf="@+id/line_img_action"
+                    android:gravity="center_vertical|left"
+                    android:paddingLeft="30dp"
+                    android:text="重新上传"
+                    android:textColor="#5c5c5c"
+                    android:textSize="15dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_upload_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/rl_img"
+                android:layout_alignLeft="@+id/rl_img"
+                android:layout_alignParentBottom="true"
+                android:layout_alignRight="@+id/rl_img"
+                android:layout_alignTop="@+id/rl_img">
+
+                <ProgressBar
+                    android:id="@+id/pb_uploading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/tv_upload_status"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="15dp"
+                    android:indeterminateDrawable="@drawable/uploading" />
+
+                <ImageView
+                    android:id="@+id/iv_retry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/tv_upload_status"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="15dp"
+                    android:src="@mipmap/reupload" />
+
+                <TextView
+                    android:id="@+id/tv_upload_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="30dp"
+                    android:text="上传中"
+                    android:textColor="#fff"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_dish_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignRight="@+id/rl_img"
+                android:layout_margin="4dp"
+                android:drawableLeft="@mipmap/ugc_edit_dish_name"
+                android:gravity="top"
+                android:shadowColor="#a000"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="2"
+                android:text="菜名"
+                android:textColor="#fff"
+                android:textSize="12sp" />
+
+            <RelativeLayout
+                android:id="@+id/rl_text_container"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_toLeftOf="@+id/linearLayout4"
+                android:background="@drawable/ugc_item_edit_alpha"
+                android:scaleType="centerCrop"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/et_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="8dp"
+                    android:background="#0000"
+                    android:gravity="top|left"
+                    android:hint="为你的美食说点什么吧..."
+                    android:inputType="textMultiLine"
+                    android:padding="8dp"
+                    android:textColor="@color/ff_text_black"
+                    android:textColorHint="@color/ff_text_gray"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_text_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:drawablePadding="4dp"
+                    android:drawableRight="@mipmap/ic_text_number"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="4dp"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:paddingTop="15dp"
+                    android:text="0/1"
+                    android:textColor="@color/ff_text_gray"
+                    android:textSize="10sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_dish_container"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_toLeftOf="@+id/linearLayout4"
+                android:background="@drawable/ugc_item_edit_alpha"
+                android:scaleType="centerCrop"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="27dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="27dp"
+                    android:layout_marginRight="27dp"
+                    android:background="@drawable/ugc_edit_input_dish_bg"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/et_dish"
+                        android:layout_width="match_parent"
+                        android:layout_height="27dp"
+                        android:layout_weight="1"
+                        android:background="#0000"
+                        android:ems="10"
+                        android:gravity="center_vertical"
+                        android:hint="请输入菜品名称"
+                        android:inputType="textPersonName"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:text="Name"
+                        android:textColor="@color/ff_text_black"
+                        android:textColorHint="@color/ff_text_gray"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_clear_dish"
+                        android:layout_width="27dp"
+                        android:layout_height="27dp"
+                        android:scaleType="center"
+                        android:src="@mipmap/ic_clear_rest_item_add" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/iv_dish_ok"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:paddingBottom="4dp"
+                    android:paddingLeft="14dp"
+                    android:paddingRight="4dp"
+                    android:paddingTop="14dp"
+                    android:src="@mipmap/ic_text_number" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_dish_container1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_toLeftOf="@+id/linearLayout4"
+                android:background="@drawable/ugc_item_edit_alpha"
+                android:scaleType="centerCrop"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout5"
+                    android:layout_width="match_parent"
+                    android:layout_height="27dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="27dp"
+                    android:layout_marginRight="27dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/ugc_edit_input_dish_bg"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/et_dish1"
+                        android:layout_width="match_parent"
+                        android:layout_height="27dp"
+                        android:layout_weight="1"
+                        android:background="#0000"
+                        android:ems="10"
+                        android:gravity="center_vertical"
+                        android:hint="请输入菜品名称"
+                        android:inputType="textPersonName"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:text="Name"
+                        android:textColor="@color/ff_text_black"
+                        android:textColorHint="@color/ff_text_gray"
+                        android:textSize="12sp" />
+
+
+                    <ImageView
+                        android:id="@+id/iv_clear_dish1"
+                        android:layout_width="27dp"
+                        android:layout_height="27dp"
+                        android:scaleType="center"
+                        android:src="@mipmap/ic_clear_rest_item_add" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/iv_dish_ok1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:paddingBottom="4dp"
+                    android:paddingLeft="14dp"
+                    android:paddingRight="4dp"
+                    android:paddingTop="14dp"
+                    android:src="@mipmap/ic_text_number" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_hot_dish"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/linearLayout5"
+                    android:layout_marginTop="3dp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/rl_comment_container"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_toLeftOf="@+id/linearLayout4"
+                android:background="@drawable/ugc_item_edit_alpha"
+                android:orientation="horizontal"
+                android:scaleType="centerCrop"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/iv_good"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:drawableTop="@mipmap/ic_commend_good_unselected"
+                    android:gravity="bottom|center_horizontal"
+                    android:paddingBottom="18dp"
+                    android:paddingTop="18dp"
+                    android:scaleType="center"
+                    android:text="好吃"
+                    android:textColor="#ff6f6a"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/iv_normal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:drawableTop="@mipmap/ic_commend_normal_unselected"
+                    android:gravity="center_horizontal|bottom"
+                    android:paddingBottom="18dp"
+                    android:paddingTop="18dp"
+                    android:scaleType="center"
+                    android:text="一般"
+                    android:textColor="#ff9020"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/iv_bad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:drawableTop="@mipmap/ic_commend_bad_unselected"
+                    android:gravity="center_horizontal|bottom"
+                    android:paddingBottom="18dp"
+                    android:paddingTop="18dp"
+                    android:scaleType="center"
+                    android:text="差"
+                    android:textColor="#9aa4b8"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/linearLayout4"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:id="@+id/iv_comment"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="1"
+                    android:scaleType="center"
+                    android:src="@mipmap/ugc_edit_item_commend" />
+
+                <View
+                    android:id="@+id/line_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/line" />
+
+                <ImageView
+                    android:id="@+id/iv_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="1"
+                    android:scaleType="center"
+                    android:src="@mipmap/ic_edit_text_item_ugc" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/line" />
+
+                <ImageView
+                    android:id="@+id/iv_dish"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="1"
+                    android:scaleType="center"
+                    android:src="@mipmap/ic_dish_item_ugc" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_del"
+            android:layout_width="36dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="9dp"
+            android:layout_toRightOf="@+id/rl_content"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp"
+            android:src="@mipmap/food_item_del" />
+    </RelativeLayout>
+</com.fengnian.smallyellowo.foodie.widgets.SlidingButtonView>

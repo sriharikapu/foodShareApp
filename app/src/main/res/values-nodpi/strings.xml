@@ -1,0 +1,7 @@
+<resources>
+
+    <string name="loading">正在加载..</string>
+    <string name="base_load_faile_base_activity">亲，数据加载失败了，点击重新加载。</string>
+    <string name="dialog_loading">加载中..</string>
+    <string name="empty_data_text">没有数据哦\n点击重新获取</string>
+</resources>

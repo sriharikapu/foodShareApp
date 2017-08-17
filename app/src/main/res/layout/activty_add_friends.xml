@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/normal_bg">
+    <ListView
+        android:layout_marginTop="10dp"
+        android:id="@+id/lv_listview"
+        android:dividerHeight="0dp"
+        android:divider="@null"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></ListView>
+    <RelativeLayout
+        android:id="@+id/rl_no_friend"
+        android:layout_below="@+id/lv_listview"
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/tv_1"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="暂时没有更多"
+        android:textSize="16dp"
+        android:textColor="#333333"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:id="@+id/tv_2"
+        android:layout_below="@+id/tv_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="新加入小黄圈的好友"
+        android:layout_marginTop="5dp"
+        android:textSize="16dp"
+        android:textColor="#333333"
+        android:layout_centerHorizontal="true"/>
+        <TextView
+            android:layout_below="@+id/tv_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="绑定手机号寻找或邀请好友加入"
+            android:layout_marginTop="15dp"
+            android:textSize="15dp"
+            android:textColor="#8e8e93"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+    <ImageView
+        android:id="@+id/iv_no_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="234dp"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        android:background="@mipmap/search_no_result"
+        />
+
+</RelativeLayout>

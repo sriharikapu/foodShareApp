@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fl_cur"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/v_statusBar"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:background="#000" />
+
+        <FrameLayout
+            android:id="@+id/fl_main_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/v_statusBar"
+            android:layout_marginBottom="48dp"></FrameLayout>
+
+
+        <com.fengnian.smallyellowo.foodie.widgets.TopCropImageView
+            android:id="@+id/iv_youke_social"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/v_statusBar"
+            android:layout_marginBottom="48dp"
+            android:visibility="invisible" />
+
+        <com.fengnian.smallyellowo.foodie.widgets.TopCropImageView
+            android:id="@+id/iv_youke_user"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/v_statusBar"
+            android:layout_marginBottom="48dp"
+            android:src="@mipmap/youke_bg_social"
+            android:visibility="invisible" />
+
+        <LinearLayout
+            android:id="@+id/ll_youke_publish"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="48dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/iv_youke_publish_upper"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:scaleType="centerCrop" />
+
+            <ImageView
+                android:id="@+id/iv_youke_publish_lower"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:scaleType="centerCrop" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_youke_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#88000000"
+            android:paddingBottom="263dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_need_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/btn_login"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="36dp"
+                android:gravity="center_horizontal"
+                android:shadowColor="#000"
+                android:shadowDx="4"
+                android:shadowDy="4"
+                android:shadowRadius="4"
+                android:text="需要登录"
+                android:textColor="#fff"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/btn_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@mipmap/login_regist"
+                android:gravity="center_vertical"></TextView>
+
+        </RelativeLayout>
+
+        <RadioGroup
+            android:id="@+id/rg_main_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="@drawable/main_add"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <RadioButton
+                    android:id="@+id/rb_home"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:checked="true"
+                    android:drawableTop="@drawable/check_main_bottom_home"
+                    android:gravity="center_horizontal|bottom"
+                    android:paddingBottom="4dp"
+                    android:paddingTop="8dp"
+                    android:text="首页"
+                    android:textColor="@color/ff_text_gray"
+                    android:textSize="12sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/bottom_home_sum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="18dp"
+                        android:layout_marginTop="2dp"
+                        android:background="@mipmap/one_red_circle_img"
+                        android:gravity="center"
+                        android:text="9"
+                        android:textColor="@color/white_bg"
+                        android:textSize="10dp"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/bottom_home_tips"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_gravity="top|center_horizontal"
+                    android:layout_marginLeft="9dp"
+                    android:layout_marginTop="7dp"
+                    android:background="@drawable/main_bottom_tip_small"
+                    android:scaleType="fitXY"
+                    android:visibility="gone" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+
+                <TextView
+                    android:id="@+id/bottom_discover_sum"
+                    style="@style/tip_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|top"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/main_bottom_tip_big"
+                    android:gravity="center"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/bottom_discover_tips"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_gravity="top|center_horizontal"
+                    android:layout_marginLeft="9dp"
+                    android:layout_marginTop="7dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/main_bottom_tip_small"
+                    android:visibility="gone" />
+
+                <RadioButton
+                    android:id="@+id/rb_dynamic"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:checked="false"
+                    android:drawableTop="@drawable/check_main_bottom_discover"
+                    android:gravity="center_horizontal|bottom"
+                    android:paddingBottom="4dp"
+                    android:paddingTop="8dp"
+                    android:text="发现"
+                    android:textColor="@color/ff_text_gray"
+                    android:textSize="12sp" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:gravity="center_horizontal|bottom"
+                android:paddingBottom="4dp"
+                android:text="发布"
+                android:textColor="@color/ff_text_gray"
+                android:textSize="12sp" />
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <RadioButton
+                    android:id="@+id/rb_sns"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:checked="false"
+                    android:drawableTop="@drawable/check_main_bottom_sns"
+                    android:gravity="center_horizontal|bottom"
+                    android:paddingBottom="4dp"
+                    android:paddingTop="8dp"
+                    android:text="社交"
+                    android:textColor="@color/ff_text_gray"
+                    android:textSize="12sp" />
+
+
+                <TextView
+                    android:id="@+id/bottom_sns_sum"
+                    style="@style/tip_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|top"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/main_bottom_tip_big"
+                    android:gravity="center"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/bottom_sns_tips"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_gravity="top|center_horizontal"
+                    android:layout_marginLeft="9dp"
+                    android:layout_marginTop="7dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/main_bottom_tip_small"
+                    android:visibility="gone" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <RadioButton
+                    android:id="@+id/rb_user"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:button="@null"
+                    android:checked="false"
+                    android:drawableTop="@drawable/check_main_bottom_user"
+                    android:gravity="center_horizontal|bottom"
+                    android:paddingBottom="4dp"
+                    android:paddingTop="8dp"
+                    android:text="个人"
+                    android:textColor="@color/ff_text_gray"
+                    android:textSize="12sp" />
+
+
+                <TextView
+                    android:id="@+id/bottom_user_sum"
+                    style="@style/tip_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|top"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/main_bottom_tip_big"
+                    android:gravity="center"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/bottom_user_tips"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp"
+                    android:layout_gravity="top|center_horizontal"
+                    android:layout_marginLeft="9dp"
+                    android:layout_marginTop="7dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/main_bottom_tip_small"
+                    android:visibility="gone" />
+            </FrameLayout>
+        </RadioGroup>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/publish_gide"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#aa000000"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="14dp" />
+    </RelativeLayout>
+</FrameLayout>

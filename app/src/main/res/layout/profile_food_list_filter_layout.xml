@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/choose_item_height"
+        android:layout_marginLeft="@dimen/padding_middle"
+        android:layout_marginRight="@dimen/padding_middle">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="只显示精选"
+            android:textColor="@color/title_text_color"
+            android:textSize="@dimen/font_size_4_1" />
+
+        <CheckBox
+            android:id="@+id/checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:button="@drawable/switcher"
+            android:checked="false" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/gray_bg_new" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_middle">
+
+        <TextView
+            android:id="@+id/iv_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="类型"
+            android:textColor="@color/title_text_color"
+            android:textSize="@dimen/font_size_4_1" />
+
+        <TextView
+            android:id="@+id/shortcut"
+            android:layout_width="@dimen/filter_btn_width"
+            android:layout_height="@dimen/filter_btn_height"
+            android:layout_alignLeft="@+id/iv_type"
+            android:layout_below="@+id/iv_type"
+            android:layout_marginTop="@dimen/padding_middle"
+            android:background="@drawable/filter_btn_bg_selector"
+            android:gravity="center"
+            android:text="速记"
+            android:textColor="@color/title_text_color"
+            android:textSize="@dimen/font_size_3_1" />
+
+        <TextView
+            android:id="@+id/richtext"
+            android:layout_width="@dimen/filter_btn_width"
+            android:layout_height="@dimen/filter_btn_height"
+            android:layout_alignTop="@+id/shortcut"
+            android:layout_marginLeft="@dimen/padding_small"
+            android:layout_toRightOf="@+id/shortcut"
+            android:background="@drawable/filter_btn_bg_selector"
+            android:gravity="center"
+            android:text="编辑"
+            android:textColor="@color/title_text_color"
+            android:textSize="@dimen/font_size_3_1" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/gray_bg_new" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_middle">
+
+        <TextView
+            android:id="@+id/iv_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="状态"
+            android:textColor="@color/title_text_color"
+            android:textSize="@dimen/font_size_4_1" />
+
+        <TextView
+            android:id="@+id/btn_un_save"
+            android:layout_width="@dimen/filter_btn_width"
+            android:layout_height="@dimen/filter_btn_height"
+            android:layout_alignLeft="@+id/iv_state"
+            android:layout_below="@+id/iv_state"
+            android:layout_marginTop="@dimen/padding_middle"
+            android:background="@drawable/filter_btn_bg_selector"
+            android:gravity="center"
+            android:text="未保存"
+            android:textColor="@color/title_text_color"
+            android:textSize="@dimen/font_size_3_1" />
+
+        <TextView
+            android:id="@+id/btn_un_share"
+            android:layout_width="@dimen/filter_btn_width"
+            android:layout_height="@dimen/filter_btn_height"
+            android:layout_alignTop="@+id/btn_un_save"
+            android:layout_marginLeft="@dimen/padding_small"
+            android:layout_toRightOf="@+id/btn_un_save"
+            android:background="@drawable/filter_btn_bg_selector"
+            android:gravity="center"
+            android:text="未分享"
+            android:textColor="@color/title_text_color"
+            android:textSize="@dimen/font_size_3_1" />
+
+        <TextView
+            android:id="@+id/btn_shared"
+            android:layout_width="@dimen/filter_btn_width"
+            android:layout_height="@dimen/filter_btn_height"
+            android:layout_alignTop="@+id/btn_un_share"
+            android:layout_marginLeft="@dimen/padding_small"
+            android:layout_toRightOf="@+id/btn_un_share"
+            android:background="@drawable/filter_btn_bg_selector"
+            android:gravity="center"
+            android:text="已分享"
+            android:textColor="@color/title_text_color"
+            android:textSize="@dimen/font_size_3_1" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/gray_bg_new" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:id="@+id/btn_finish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/view_5"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/padding_tiny"
+            android:layout_marginRight="@dimen/padding_middle"
+            android:background="@mipmap/btn_ok" />
+
+        <TextView
+            android:id="@+id/btn_reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view_5"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/btn_finish"
+            android:layout_toStartOf="@+id/btn_finish"
+            android:background="@drawable/btn_reset"
+            android:src="@drawable/btn_reset" />
+    </RelativeLayout>
+</LinearLayout>

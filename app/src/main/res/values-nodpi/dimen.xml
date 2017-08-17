@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="ff_border">12dp</dimen>
+    <dimen name="ff_line_thin">1px</dimen>
+    <dimen name="ff_text_size_title">18sp</dimen>
+    <dimen name="ff_text_size_menu">15sp</dimen>
+
+    <dimen name="ff_actionbarHight">48dp</dimen>
+    <dimen name="ff_actionBar_icon_size">36dp</dimen>
+    <dimen name="ff_actionBar_menuWidth">48dp</dimen>
+</resources>

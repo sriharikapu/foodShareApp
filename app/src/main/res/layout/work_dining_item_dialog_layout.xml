@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/linear"
+        android:src="@drawable/work_dining_dialog_close" />
+
+    <com.fengnian.smallyellowo.foodie.View.CornerLinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_close"
+        android:layout_marginTop="-10dp"
+        android:background="@color/white_bg"
+        android:orientation="vertical"
+        android:paddingBottom="16dp">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@color/image_bg"
+            android:scaleType="centerCrop" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="18dp">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:ellipsize="end"
+                android:lines="1"
+                android:textColor="@color/title_text_color"
+                android:textSize="@dimen/font_size_5"
+                tools:text="好吃的葱油饼" />
+
+            <RatingBar
+                android:id="@+id/rating_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="10dp"
+                android:layout_below="@+id/tv_title"
+                android:layout_marginTop="5dp"
+                android:isIndicator="true"
+                android:numStars="4"
+                android:progressDrawable="@drawable/selector_rating_detail"
+                tools:rating="2" />
+
+            <TextView
+                android:id="@+id/tv_level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/rating_bar"
+                android:layout_marginLeft="@dimen/padding_small"
+                android:layout_marginTop="-3dp"
+                android:layout_toRightOf="@+id/rating_bar"
+                android:textColor="#ff7000"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                tools:text="3.5" />
+
+            <LinearLayout
+                android:id="@+id/shop_linear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rating_bar"
+                android:layout_marginTop="9dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_business_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:textColor="@color/title_text_color"
+                    android:textSize="@dimen/font_size_2_1"
+                    tools:text="葱油饼系列" />
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="11dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@color/title_text_color" />
+
+                <TextView
+                    android:id="@+id/tv_avarge_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/title_text_color"
+                    android:textSize="@dimen/font_size_2_1"
+                    tools:text="¥100/人" />
+
+                <View
+                    android:id="@+id/line2"
+                    android:layout_width="1px"
+                    android:layout_height="11dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@color/title_text_color" />
+
+                <TextView
+                    android:id="@+id/tv_distance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/title_text_color"
+                    android:textSize="@dimen/font_size_2_1"
+                    tools:text="距离160m" />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/line" />
+
+        <TextView
+            android:id="@+id/tv_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="16dp"
+            android:drawableLeft="@drawable/work_dialog_address_icon"
+            android:drawablePadding="5dp"
+            android:drawableRight="@mipmap/chakan_arrow_right"
+            android:paddingTop="2dp"
+            android:textColor="@color/title_text_color"
+            android:textSize="@dimen/font_size_2_1"
+            tools:text="地址：酒仙桥14号" />
+
+        <TextView
+            android:id="@+id/tv_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="6dp"
+            android:drawableLeft="@drawable/work_dialog_phone_icon"
+            android:drawablePadding="5dp"
+            android:drawableRight="@mipmap/chakan_arrow_right"
+            android:paddingBottom="2dp"
+            android:textColor="@color/title_text_color"
+            android:textSize="@dimen/font_size_2_1"
+            tools:text="电话：19283948383" />
+    </com.fengnian.smallyellowo.foodie.View.CornerLinearLayout>
+
+    <ImageView
+        android:id="@+id/dining_get_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/work_dining_radom_icon" />
+
+</RelativeLayout>

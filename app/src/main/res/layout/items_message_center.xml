@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+    android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/is_add_crown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:background="@mipmap/small_bg_is_add_crow"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/iv_header"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="@dimen/padding_middle"
+            android:layout_marginLeft="@dimen/padding_middle"
+            android:layout_marginTop="@dimen/padding_middle"
+            android:scaleType="centerCrop"
+            tools:background="#bbff32" />
+
+        <TextView
+            android:id="@+id/tv_nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/iv_header"
+            android:layout_marginLeft="@dimen/padding_small"
+            android:layout_marginTop="1dp"
+            android:layout_toLeftOf="@+id/iv_img"
+            android:layout_toRightOf="@+id/iv_header"
+            android:textColor="#3c5ca0"
+            android:textSize="14dp"
+            tools:text="昵称昵称" />
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_nickname"
+            android:layout_marginLeft="@dimen/padding_small"
+            android:layout_marginRight="@dimen/padding_small"
+            android:layout_marginTop="5dp"
+            android:layout_toLeftOf="@+id/iv_img"
+            android:layout_toRightOf="@+id/iv_header"
+            android:textColor="#333333"
+            android:textSize="14dp"
+            tools:text="评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容评论内容" />
+
+        <ImageView
+            android:id="@+id/iv_zan_or_remark_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_nickname"
+            android:layout_marginLeft="@dimen/padding_small"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/iv_header"
+            android:background="@mipmap/message_dianzan_img"
+            android:textColor="#333"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_content"
+            android:layout_marginLeft="@dimen/padding_small"
+            android:layout_marginTop="6dp"
+            android:layout_toRightOf="@+id/iv_header"
+            android:textColor="#666"
+            android:textSize="12dp"
+            tools:text="2017年03月20日 12:53" />
+
+        <ImageView
+            android:id="@+id/iv_img"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignWithParentIfMissing="true"
+            android:layout_marginBottom="@dimen/padding_middle"
+            android:layout_marginRight="@dimen/padding_middle"
+            android:layout_marginTop="@dimen/padding_middle"
+            android:background="#ccc"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/tv_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/iv_header"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/iv_header"
+            android:layout_marginRight="@dimen/padding_middle"
+            android:gravity="center"
+            android:maxLength="15"
+            android:textColor="#888"
+            android:textSize="14dp"
+            tools:text="北京" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_2"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@+id/rl_1">
+
+        <TextView
+            android:id="@+id/tv_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="查看更早的消息......"
+            android:textColor="#333"
+            android:textSize="15dp" />
+    </RelativeLayout>
+</RelativeLayout>

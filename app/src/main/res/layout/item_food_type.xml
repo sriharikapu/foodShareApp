@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <TextView
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:id="@+id/food_type_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLength="5"
+        android:text="东南亚菜:"
+        android:textColor="@color/color_9"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/food_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:background="@drawable/bg_food_type"
+        android:gravity="center"
+        android:text="100个"
+        android:textColor="@color/color_2"
+        android:textSize="12sp" />
+</LinearLayout>

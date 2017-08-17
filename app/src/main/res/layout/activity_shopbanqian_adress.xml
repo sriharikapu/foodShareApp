@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/normal_bg">
+
+    <RelativeLayout
+        android:id="@+id/rl_1"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="#fff">
+
+        <TextView
+            android:id="@+id/tv_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="搬迁至"
+            android:textSize="16dp"
+            android:layout_marginLeft="15dp"
+            android:layout_centerVertical="true"
+            android:textColor="#666"/>
+        <EditText
+            android:id="@+id/ed_set_nickname"
+            android:paddingLeft="27dp"
+            android:hint="请输入商户新址"
+            android:textColor="#333333"
+            android:lineSpacingExtra="3dp"
+            android:textSize="14dp"
+            android:textCursorDrawable="@drawable/edtext_cursor_style"
+            android:layout_toRightOf="@+id/tv_1"
+            android:background="@null"
+            android:textColorHint="#cdcdcd"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_set_nickname"
+        android:layout_below="@+id/rl_1"
+        android:layout_marginTop="41dp"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:text="提交"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:gravity="center"
+        android:textSize="16dp"
+        android:textColor="#666"
+        android:background="@drawable/logout_press"/>
+
+</RelativeLayout>

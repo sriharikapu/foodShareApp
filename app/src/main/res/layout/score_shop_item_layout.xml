@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/list_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="@dimen/sku_shop_image_size"
+            android:layout_height="@dimen/sku_shop_image_size"
+            android:layout_marginTop="20dp"
+            android:background="@color/image_bg"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/sku_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="14dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="@color/title_text_color"
+            android:textSize="@dimen/font_size_3_2"
+            tools:text="米家小米手环" />
+
+        <TextView
+            android:id="@+id/tv_score"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:textColor="@color/modern_text_content_color"
+            android:textSize="@dimen/font_size_2"
+            tools:text="449积分" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/right_line"
+        android:layout_width="1px"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@+id/list_item"
+        android:layout_alignRight="@+id/list_item"
+        android:layout_alignTop="@+id/list_item"
+        android:background="@color/line" />
+
+    <View
+        android:id="@+id/bottom_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_alignBottom="@+id/list_item"
+        android:background="@color/line" />
+</RelativeLayout>

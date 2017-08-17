@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_cover"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/detail_modern_cover_height"
+            android:layout_alignParentTop="true"
+            android:background="@color/image_bg"
+            android:scaleType="centerCrop" />
+
+        <RelativeLayout
+            android:id="@+id/cover_frame"
+            android:layout_width="match_parent"
+            android:layout_height="202dp"
+            android:layout_below="@+id/iv_cover"
+            android:layout_marginLeft="26dp"
+            android:layout_marginRight="26dp"
+            android:layout_marginTop="-101dp"
+            android:background="@drawable/detail_modern_cover_frame"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="@dimen/padding_big"
+                android:gravity="center"
+                android:shadowColor="@color/white_shadow_color"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:textColor="@color/white_bg"
+                android:textSize="@dimen/font_size_10"
+                tools:text="有味道的地道美食之旅" />
+
+            <LinearLayout
+                android:id="@+id/ll_level_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignWithParentIfMissing="true"
+                android:layout_below="@+id/tv_title"
+                android:layout_marginTop="@dimen/padding_small"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <com.fengnian.smallyellowo.foodie.widgets.CustomRatingBar
+                    android:id="@+id/rb_level_custom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" />
+
+                <TextView
+                    android:id="@+id/tv_level"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/padding_small"
+                    android:shadowColor="@color/white_shadow_color"
+                    android:shadowDx="2"
+                    android:shadowDy="2"
+                    android:shadowRadius="1"
+                    android:singleLine="true"
+                    android:textColor="@color/white_bg"
+                    android:textSize="@dimen/font_size_2"
+                    tools:text="极力推荐" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_add_crown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/iv_avator"
+                android:layout_alignTop="@+id/iv_avator"
+                android:layout_marginLeft="-4.5dp"
+                android:layout_marginTop="-4.5dp"
+                android:src="@mipmap/small_bg_is_add_crow"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/iv_avator"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/user_avatar_circle_with_alpha"
+                android:padding="1.5dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/user_avatar_circle_gray" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_avator"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="13dp"
+                android:textColor="@color/modern_text_color"
+                android:textSize="@dimen/font_size_3"
+                tools:text="名字" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_name"
+                android:layout_marginTop="@dimen/padding_big"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/padding_middle"
+                android:paddingRight="@dimen/padding_middle">
+
+                <TextView
+                    android:id="@+id/tv_class"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:lines="1"
+                    android:maxLength="10"
+                    android:textColor="@color/modern_text_color"
+                    android:textSize="@dimen/font_size_2"
+                    tools:text="餐类：下午茶" />
+
+                <TextView
+                    android:id="@+id/tv_poeple_num"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:lines="1"
+                    android:maxLength="10"
+                    android:minWidth="40dp"
+                    android:textColor="@color/modern_text_color"
+                    android:textSize="@dimen/font_size_2"
+                    tools:text="人数：10人" />
+
+                <TextView
+                    android:id="@+id/tv_total_price"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:lines="1"
+                    android:maxLength="10"
+                    android:textColor="@color/modern_text_color"
+                    android:textSize="@dimen/font_size_2"
+                    tools:text="总价：¥1000" />
+                <TextView
+                    android:id="@+id/tv_people_average"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:lines="1"
+                    android:maxLength="10"
+                    android:textColor="@color/modern_text_color"
+                    android:textSize="@dimen/font_size_2"
+                    tools:text="人均：¥100" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_is_jing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/cover_frame"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="-10dp"
+            android:src="@mipmap/dynamic_detail_jing" />
+
+        <TextView
+            android:id="@+id/tv_attention"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/padding_big"
+            android:layout_marginTop="90dp"
+            android:drawableLeft="@mipmap/ic_add_attention"
+            android:drawablePadding="4dp"
+            android:gravity="center"
+            android:shadowColor="@color/white_shadow_color"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="1"
+            android:textColor="@color/white_bg"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            tools:text="互相关注" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_rest_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="@dimen/padding_small"
+        android:layout_marginRight="@dimen/padding_small"
+        android:layout_marginTop="30dp"
+        android:drawablePadding="@dimen/padding_small"
+        android:drawableRight="@drawable/brief_style_2_arrow"
+        android:gravity="center"
+        android:lineSpacingMultiplier="1.2"
+        android:textColor="@color/modern_text_color"
+        android:textSize="@dimen/font_size_3"
+        tools:text="餐厅：北京好吃的烤鸭食品专营" />
+</LinearLayout>

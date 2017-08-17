@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="7dp"
+    android:paddingRight="10dp">
+
+    <TextView
+        android:id="@+id/tv_year"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:text="2016年"
+        android:textColor="#333333"
+        android:textSize="21sp" />
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_month"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="26"
+        android:textColor="#333333"
+        android:textSize="21sp" />
+
+    <TextView
+        android:id="@+id/tv_month"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_year"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="-50dp"
+        android:layout_toLeftOf="@+id/fl_content_container"
+        android:text="2月"
+        android:textColor="#333333"
+        android:textSize="12sp" />
+
+    <FrameLayout
+        android:id="@+id/fl_content_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tv_month"
+        android:layout_marginLeft="60dp">
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/iv_complete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fl_content_container"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="-10dp"
+        android:src="@mipmap/growth_complete_want_eat" />
+</RelativeLayout>

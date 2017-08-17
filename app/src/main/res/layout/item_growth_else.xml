@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:id="@+id/else_bg"
+    android:layout_height="wrap_content"
+    android:background="@mipmap/growth_else_bg_yellow">
+    <LinearLayout
+        android:id="@+id/ll_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_centerVertical="true"
+        android:background="@drawable/growth_else_img_bg"
+        android:padding="2dp">
+        <com.fengnian.smallyellowo.foodie.widgets.CircleImageView
+            android:id="@+id/iv_img"
+            android:layout_width="53dp"
+            android:layout_height="53dp"
+            android:src="@mipmap/userinfo_defaultbg"
+            android:scaleType="centerCrop" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@+id/ll_img"
+        android:layout_toRightOf="@+id/ll_img"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/linearLayout6"
+            android:layout_alignStart="@+id/linearLayout6"
+            android:layout_alignTop="@+id/linearLayout6"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="4dp"
+            android:text="《大师傅》"
+            android:textColor="#fff"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/tv_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/linearLayout6"
+            android:layout_alignStart="@+id/linearLayout6"
+            android:layout_alignTop="@+id/linearLayout6"
+            android:layout_marginBottom="2dp"
+            android:text="Textw"
+            android:ellipsize="end"
+            android:textColor="#fff"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/linearLayout6"
+            android:layout_alignStart="@+id/linearLayout6"
+            android:layout_alignTop="@+id/linearLayout6"
+            android:text="TextView"
+            android:layout_marginBottom="4dp"
+            android:ellipsize="end"
+            android:textColor="#fff"
+            android:textSize="11sp" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/content_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/rl_comment" />
+
+        <RelativeLayout
+            android:id="@+id/rl_comment"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/comment_input_height"
+            android:layout_alignParentBottom="true"
+            android:layout_alignWithParentIfMissing="true"
+            android:background="@color/ff_bg_actionbar">
+
+            <com.fengnian.smallyellowo.foodie.emoji.CustomEmojiEditText
+                android:id="@+id/et_comment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="@dimen/padding_middle"
+                android:layout_marginTop="8dp"
+                android:layout_toLeftOf="@+id/emoji_panel_show"
+                android:layout_weight="1"
+                android:background="@drawable/shape_input"
+                android:gravity="center_vertical"
+                android:hint="说点什么吧..."
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:textColor="#333"
+                android:textColorHint="#999"
+                android:textSize="14dp" />
+
+            <ImageView
+                android:id="@+id/emoji_panel_show"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/padding_middle"
+                android:layout_marginRight="@dimen/padding_middle"
+                android:layout_toLeftOf="@+id/btn_comment"
+                android:src="@drawable/emoji_panel_show" />
+
+            <TextView
+                android:id="@+id/btn_comment"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/et_comment"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/et_comment"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/padding_middle"
+                android:background="@drawable/shape_input"
+                android:gravity="center"
+                android:padding="6dp"
+                android:text="发送"
+                android:textColor="@color/gray_bg"
+                android:textSize="@dimen/font_size_3_1" />
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/rl_pick_sort"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lv_view1"
+        android:background="#fff"
+        >
+        <View
+            android:id="@+id/view_5"
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="#ddd"></View>
+        <ImageView
+            android:id="@+id/btn_ok"
+            android:layout_below="@+id/view_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="8dp"
+            android:src="@mipmap/btn_ok" />
+
+        <ImageView
+            android:layout_below="@+id/view_5"
+            android:id="@+id/btn_reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_toLeftOf="@+id/btn_ok"
+            android:layout_toStartOf="@+id/btn_ok"
+            android:src="@drawable/btn_reset" />
+
+    </RelativeLayout>
+</RelativeLayout>

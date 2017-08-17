@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+
+        <com.fan.framework.widgets.ResizeLayout
+            android:id="@+id/ll_baseActivity_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/ff_actionbarHight"
+            android:background="@color/ff_bg_app"
+            android:minHeight="100dp"></com.fan.framework.widgets.ResizeLayout>
+
+        <TextView
+            android:id="@+id/base_tv_noNet"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/ff_actionbarHight"
+            android:drawablePadding="15dp"
+            android:gravity="center"
+            android:text="TextView"
+            android:textColor="@color/ff_text_gray"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+        <include
+            layout="@layout/ff_view_actionbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ff_actionbarHight" />
+    </FrameLayout>
+
+    <View
+        android:id="@+id/v_baseActivity_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#000" />
+</LinearLayout>

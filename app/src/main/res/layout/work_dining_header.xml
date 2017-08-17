@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/head_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white_bg"
+        android:clipChildren="false">
+
+        <TextView
+            android:id="@+id/image_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/dining_header_img" />
+
+        <include
+            android:id="@+id/dining_nearby"
+            layout="@layout/dining_nearby"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/image_header" />
+
+        <View
+            android:id="@+id/line2"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignBottom="@+id/dining_nearby"
+            android:layout_marginLeft="@dimen/padding_middle"
+            android:layout_marginRight="@dimen/padding_middle"
+            android:background="@color/line" />
+
+        <com.fengnian.smallyellowo.foodie.diningcase.WorkDiningHeaderViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="166dp"
+            android:layout_below="@+id/dining_nearby"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="3dp"
+            android:clipChildren="false" />
+
+        <include
+            android:id="@+id/list_title"
+            layout="@layout/work_dining_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view_pager" />
+
+        <View
+            android:id="@+id/lin_1"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignBottom="@+id/view_pager"
+            android:layout_marginLeft="14dp"
+            android:layout_marginRight="14dp"
+            android:background="@color/line" />
+
+        <ImageView
+            android:id="@+id/iv_back_2"
+            android:layout_width="@dimen/ff_actionbarHight"
+            android:layout_height="@dimen/ff_actionbarHight"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="16dp"
+            android:scaleType="centerInside"
+            android:src="@mipmap/ff_ic_back_normal" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/friend_serarh_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/padding_big">
+
+        <TextView
+            android:id="@+id/dialog_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:gravity="center"
+            android:text="@string/score_address_show"
+            android:textColor="@color/title_text_color"
+            android:textSize="@dimen/font_size_5_1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="25dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="55dp"
+                android:text="收货人："
+                android:textColor="@color/color_1"
+                android:textSize="@dimen/font_size_3_2" />
+
+            <TextView
+                android:id="@+id/p_people"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="2dp"
+                android:background="@null"
+                android:gravity="center_vertical|left"
+                android:maxLength="12"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:singleLine="true"
+                android:textColor="@color/color_10"
+                android:textCursorDrawable="@drawable/custom_cursor"
+                android:textSize="@dimen/font_size_3_2"
+                tools:text="小黄圈" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="6dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="55dp"
+                android:text="电话："
+                android:textColor="@color/color_1"
+                android:textSize="@dimen/font_size_3_2" />
+
+            <TextView
+                android:id="@+id/ed_phone"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginLeft="2dp"
+                android:background="@null"
+                android:gravity="center_vertical|left"
+                android:inputType="phone"
+                android:maxLength="11"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:singleLine="true"
+                android:textColor="@color/color_10"
+                android:textCursorDrawable="@drawable/custom_cursor"
+                android:textSize="@dimen/font_size_3_2"
+                tools:text="1587845125" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="6dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="55dp"
+                android:text="省市区："
+                android:textColor="@color/color_1"
+                android:textSize="@dimen/font_size_3_2" />
+
+            <TextView
+                android:id="@+id/tv_city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:background="@null"
+                android:drawablePadding="6dp"
+                android:gravity="center_vertical|left"
+                android:minHeight="35dp"
+                android:paddingBottom="@dimen/padding_tiny"
+                android:paddingLeft="8dp"
+                android:paddingRight="10dp"
+                android:paddingTop="@dimen/padding_tiny"
+                android:textColor="@color/color_10"
+                android:textColorHint="@color/color_9"
+                android:textCursorDrawable="@drawable/custom_cursor"
+                android:textSize="@dimen/font_size_3_2"
+                tools:text="北京市大兴区苹果园" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/padding_big"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="6dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="55dp"
+                android:text="地址："
+                android:textColor="@color/color_1"
+                android:textSize="@dimen/font_size_3_2" />
+
+            <TextView
+                android:id="@+id/tv_area"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:background="@null"
+                android:drawablePadding="6dp"
+                android:gravity="center_vertical|left"
+                android:maxLines="4"
+                android:minHeight="35dp"
+                android:paddingBottom="@dimen/padding_tiny"
+                android:paddingLeft="8dp"
+                android:paddingRight="10dp"
+                android:paddingTop="@dimen/padding_tiny"
+                android:textColor="@color/color_10"
+                android:textColorHint="@color/color_9"
+                android:textCursorDrawable="@drawable/custom_cursor"
+                android:textSize="@dimen/font_size_3_2"
+                tools:text="三里屯美特斯邦威" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btn_linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp">
+
+            <Button
+                android:id="@+id/btn_edit"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/address_btn_edit_selector"
+                android:gravity="center"
+                android:text="修改地址"
+                android:textColor="@color/title_text_color"
+                android:textSize="14dp" />
+
+            <Button
+                android:id="@+id/btn_sure"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/address_btn_sure_selector"
+                android:gravity="center"
+                android:text="确定"
+                android:textColor="@color/title_text_color"
+                android:textSize="14dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:padding="@dimen/padding_middle"
+        android:src="@drawable/address_dialog_colse" />
+
+</RelativeLayout>
